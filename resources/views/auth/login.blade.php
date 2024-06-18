@@ -1,31 +1,41 @@
 <x-layout>
 
-    <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div class="row">
+        <div class="col-12">
+            <form method="POST" action="/login">
+                @csrf
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email" type="email" class="form-control" required>
+                    <div class="form-text">Non condivideremo la tua email mai con nessuno.</div>
+                </div>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                    </span>
+                @enderror
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control" required>
+                </div>
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                    </span>
+                @enderror
+
+                <div class="mb-3 form-check">
+                    <input name="remember" type="checkbox" class="form-check-input" required>
+                    <label class="form-check-label" for="remember">Ricordami</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Accedi</button>
+            </form>
+
+            <a class="btn btn-link" href="{{ route('register') }}">Se non sei registrato, subito!</a>
         </div>
-
-       
-
-       
-
-
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Conferma Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    </div>
 
 </x-layout>

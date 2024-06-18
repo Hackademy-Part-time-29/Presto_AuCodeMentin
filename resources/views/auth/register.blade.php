@@ -1,35 +1,48 @@
 <x-layout>
 
-    <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div class="row">
+        <div class="col-12">
+            <form method="POST" action="/register">
+                @csrf
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input name="name" type="text" class="form-control">
+                </div>
+                @error('name')
+                    <div class="text-danger">
+                        {{$message}}
+                    </div>
+                @enderror
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email" type="email" class="form-control">
+                </div>
+                @error('email')
+                    <div class="text-danger">
+                        {{$message}}
+                    </div>
+                @enderror
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control">
+                </div>
+                @error('password')
+                    <div class="text-danger">
+                        {{$message}}
+                    </div>
+                @enderror
+
+                <div class="mb-3">
+                    <label for="password_confirmation" class="form-label">Conferma Password</label>
+                    <input name="password_confirmation" type="password" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Registrati</button>
+            </form>
         </div>
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nome</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-
-       
-
-
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Conferma Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    </div>
 
 </x-layout>
