@@ -11,9 +11,9 @@
                     <div class="form-text">Non condivideremo la tua email mai con nessuno.</div>
                 </div>
                 @error('email')
-                    <span class="invalid-feedback" role="alert">
+                    <p class="fst-italic text-danger">
                         {{ $message }}
-                    </span>
+                    </p>
                 @enderror
 
                 <div class="mb-3">
@@ -21,9 +21,9 @@
                     <input name="password" type="password" class="form-control" required>
                 </div>
                 @error('password')
-                    <span class="invalid-feedback" role="alert">
+                    <p class="fst-italic text-danger">
                         {{ $message }}
-                    </span>
+                    </p>
                 @enderror
 
                 <div class="mb-3 form-check">

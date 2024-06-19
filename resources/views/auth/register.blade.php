@@ -10,9 +10,9 @@
                     <input name="name" type="text" class="form-control">
                 </div>
                 @error('name')
-                    <div class="text-danger">
-                        {{$message}}
-                    </div>
+                    <p class="fst-italic text-danger">
+                        {{ $message }}
+                    </p>
                 @enderror
 
                 <div class="mb-3">
@@ -20,9 +20,9 @@
                     <input name="email" type="email" class="form-control">
                 </div>
                 @error('email')
-                    <div class="text-danger">
-                        {{$message}}
-                    </div>
+                    <p class="fst-italic text-danger">
+                        {{ $message }}
+                    </p>
                 @enderror
 
                 <div class="mb-3">
@@ -30,9 +30,9 @@
                     <input name="password" type="password" class="form-control">
                 </div>
                 @error('password')
-                    <div class="text-danger">
-                        {{$message}}
-                    </div>
+                    <p class="fst-italic text-danger">
+                        {{ $message }}
+                    </p>
                 @enderror
 
                 <div class="mb-3">
