@@ -11,6 +11,6 @@ class PublicController extends Controller
     }
 
     public function insertAdd(){
-        return view("inserisci-annuncio");
+        return view("article.create");
     }
 }
