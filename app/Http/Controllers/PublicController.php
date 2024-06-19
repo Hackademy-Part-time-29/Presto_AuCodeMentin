@@ -9,4 +9,8 @@ class PublicController extends Controller
     public function homepage(){
         return view("home");
     }
+
+    public function insertAdd(){
+        return view("inserisci-annuncio");
+    }
 }

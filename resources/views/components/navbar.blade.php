@@ -22,25 +22,36 @@
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li>
                 @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person"></i> {{auth()->user()->name ?? "Utente"}}</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"
-                            onclick="
-                            event.preventDefault();
-                              getElementById('form-logout').submit();
-                            ">
-                            Logout
-                        </a>
-                    </li>
+                    
+                    
 
-                    <form id="form-logout" method="POST" action="/logout" class="d-none">
-                        @csrf
-                    </form>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-person"></i> {{auth()->user()->name ?? "Utente"}}</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                        <li><a class="dropdown-item" href="#">Gestione account</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                onclick="
+                                event.preventDefault();
+                                  getElementById('form-logout').submit();
+                                ">
+                                Logout
+                            </a>
+                        </li>
+    
+                        <form id="form-logout" method="POST" action="/logout" class="d-none">
+                            @csrf
+                        </form>
+                        </ul>
+                      </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="/login"><i class="bi bi-person"></i> Accedi</a>
+                        <a class="nav-link" href="/login">Accedi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Registrati</a>
                     </li>
                 @endauth
             </ul>

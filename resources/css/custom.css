@@ -1,0 +1,26 @@
+.rounded-gradient {
+    background: rgb(22,15,152);
+    background: linear-gradient(126deg, rgba(22,15,152,1) 14%, rgba(58,49,221,1) 46%, rgba(94,155,244,1) 71%);
+    border-radius: 0% 0% 22% 22% / 0% 0% 24% 24%;
+    width: 100%;
+    height: 600px;
+}
+
+.center-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altezza della pagina intera */
+}
+
+.btn-custom {
+    padding: 15px 30px; /* Aumenta le dimensioni del pulsante */
+    font-size: 1.5rem; /* Aumenta la dimensione del testo */
+    color: #343a40; /* Colore del testo */
+    border: none; /* Rimuove il bordo */
+    box-shadow: 30px 26px 15px -11px rgba(0,0,0,0.1); /* Ombra leggera */
+}
+
+.btn-custom:hover{
+    border:1px solid black; /*Crea il bordo al cursore sul bottone*/
+}

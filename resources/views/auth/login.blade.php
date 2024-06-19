@@ -27,7 +27,7 @@
                 @enderror
 
                 <div class="mb-3 form-check">
-                    <input name="remember" type="checkbox" class="form-check-input" required>
+                    <input name="remember" type="checkbox" class="form-check-input">
                     <label class="form-check-label" for="remember">Ricordami</label>
                 </div>
 
