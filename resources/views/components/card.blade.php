@@ -1,4 +1,4 @@
-<x-layout>
+
 
     <div class="col-md-4 mb-3">
       <div class="card mx-auto shadow text-center">
@@ -8,10 +8,9 @@
               <h6 class="card-subtitle text-muted">{{ $article->price }} €</h6>
               <div class="mt-4">
                   <a href="{{route('article.show', compact ('article'))}}" class="btn btn-primary">Dettaglio</a>
-                  <a href="{{route('byCategory', ['category' => $category])}}" class="btn btn-outline-info ms-2">Categoria</a>
+                  <a href="{{route('byCategory', ['category' => $article->category])}}" class="btn btn-outline-info ms-2">{{$article->category->name}}</a>
               </div>
           </div>
       </div>
     </div>
   
-</x-layout>

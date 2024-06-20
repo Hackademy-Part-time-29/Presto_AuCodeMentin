@@ -35,7 +35,7 @@
 
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo in € :</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="price"
+            <input type="text" class="form-control @error('price') is-invalid @enderror" id="price"
                 wire:model.blur="price">
         </div>
         @error('price')
@@ -46,8 +46,8 @@
 
         <div class="mb-3">
             <label for="category">Seleziona una categoria :</label>
-            <select id="category" wire:model.blur="category" class="form-control @error('title') is-invalid @enderror">
-                <option selected disabled>-- Seleziona --</option>
+            <select id="category" wire:model.blur="category" class="form-control @error('category') is-invalid @enderror">
+                <option label>-- Seleziona --</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
