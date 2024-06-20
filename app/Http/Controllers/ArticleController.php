@@ -15,12 +15,19 @@ class ArticleController extends Controller implements HasMiddleware
             new Middleware('auth', only: ['create']),
         ];
     }
+
+    public function byCategory(Category $category){
+
+        return view('article.byCategory', ['articles' => $category->articles, 'category' => $category]);
+        
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $articles = Article::orderBy('created_at', 'desc')->paginate(6);
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -44,7 +51,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**

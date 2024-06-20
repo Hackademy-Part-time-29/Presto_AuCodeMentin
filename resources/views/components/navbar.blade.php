@@ -13,8 +13,24 @@
                     <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('insert')}}">Annunci</a>
+                    <a class="nav-link" href="{{route('article.index')}}">Annunci</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                            <li>
+                                <a class="dropdown-item text-capitalize" href="{{route('byCategory', ['category' => $category])}}">{{ $category->name }}</a>
+                                @if (!$loop->last)
+                                    <hr class="dropdown-divider">
+                                @endif
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+                
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
