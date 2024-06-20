@@ -1,7 +1,7 @@
 <x-layout>
 
-  <div class="container">
-    <div class="row rounded-gradient align-items-center">
+  
+    <div class="row rounded-gradient align-items-center m-auto">
       <div class="col-md-6">
         <h1>Benvenuti su {{ env('APP_NAME') }}</h1>
         <h4>Inserisci un annuncio per vendere ciò che speri possa regalare le stesse emozioni che hai avuto tu!</h4>
@@ -13,7 +13,7 @@
         <img src="{{ asset('img/codecommerce-sfondo.png') }}" class="logoSfondo" alt="Logo">
       </div>
     </div>
-  </div>
+  
   
   <div class="row height-custom justify-content-center align-items-center py-5">
     @forelse ($articles as $article)

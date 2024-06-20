@@ -34,7 +34,7 @@
                 <button type="submit" class="btn btn-primary">Accedi</button>
             </form>
 
-            <a class="btn btn-link" href="{{ route('register') }}">Se non sei registrato, subito!</a>
+            <a class="btn btn-link" href="{{ route('register') }}">Se non sei registrato, fallo subito!</a>
         </div>
     </div>
 
