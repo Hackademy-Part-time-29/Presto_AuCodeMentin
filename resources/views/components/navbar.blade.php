@@ -33,9 +33,9 @@
                 
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
-                </li>
+                </li> --}}
                 @auth
                     
                     
@@ -43,9 +43,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-person"></i> {{auth()->user()->name ?? "Utente"}}</a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                        <li><a class="dropdown-item" href="#">Gestione account</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        {{-- <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                        <li><a class="dropdown-item" href="#">Gestione account</a></li> --}}
+                        {{-- <li><hr class="dropdown-divider"></li> --}}
                         <li>
                             <a class="dropdown-item" href="#"
                                 onclick="
