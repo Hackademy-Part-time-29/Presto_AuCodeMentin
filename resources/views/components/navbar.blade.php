@@ -20,9 +20,10 @@
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
+                        
                         @foreach ($categories as $category)
                             <li>
-                                <a class="dropdown-item text-capitalize" href="{{route('byCategory', ['category' => $category])}}">{{ $category->name }}</a>
+                                <a class="dropdown-item text-capitalize" href="{{route('byCategory', ['category' => $category->id])}}">{{ $category->name }}</a>
                                 @if (!$loop->last)
                                     <hr class="dropdown-divider">
                                 @endif
@@ -37,9 +38,6 @@
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li>
                 @auth
-                    
-                    
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-person"></i> {{auth()->user()->name ?? "Utente"}}</a>
                         <ul class="dropdown-menu dropdown-menu-end">
