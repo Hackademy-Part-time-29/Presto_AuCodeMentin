@@ -14,6 +14,11 @@
   
   
   <div class="row justify-content-center py-5">
+    @if (session()->has('errorMessage'))
+      <div class="alert alert-danger text-center shadow rounded w-50 mx-auto">
+          {{ session('errorMessage') }}
+      </div>
+    @endif
     <div class="container">
       <div class="row justify-content-beetwen align-items-center">
           <div class="col-6">
