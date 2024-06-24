@@ -1,23 +1,33 @@
 <x-layout>
 
   
-    <div class="row rounded-gradient align-items-center m-auto">
-      <div class="col-md-6">
-        <h1>Benvenuti su {{ env('APP_NAME') }}</h1>
-        <h4>Inserisci un annuncio per vendere ciò che speri possa regalare le stesse emozioni che hai avuto tu!</h4>
-        <div class="center-button-container">
-          <a href="{{ route('article.create') }}" class="btn btn-custom"><i class="bi bi-plus-circle"></i> Inserisci un annuncio</a> 
-        </div>
-      </div>
-      <div class="col-md-6 text-md-end text-center">
-        <img src="{{ asset('img/codecommerce-sfondo.png') }}" class="logoSfondo" alt="Logo">
+  <div class="row rounded-gradient align-items-center m-auto">
+    <div class="col-md-6">
+      <h1>Benvenuti su {{ env('APP_NAME') }}</h1>
+      <h4>Inserisci un annuncio per vendere ciò che speri possa regalare le stesse emozioni che hai avuto tu!</h4>
+      
+    </div>
+    <div class="col-md-6 text-md-end text-center">
+      <img src="{{ asset('img/codecommerce-sfondo.png') }}" class="logoSfondo" alt="Logo">
+    </div>
+  </div>
+  
+  
+  <div class="row justify-content-center py-5">
+    <div class="container">
+      <div class="row justify-content-beetwen align-items-center">
+          <div class="col-6">
+            <h1>Articoli più recenti</h1>
+          </div>
+          <div class="col-6 text-end">
+            <a href="{{ route('article.create') }}" class="btn btn-custom me-3"><i class="bi bi-plus-circle"></i> Inserisci un annuncio</a>
+            <a href="{{ route('article.index') }}" class="btn btn-custom">Tutti gli articoli</a>
+          </div>
       </div>
     </div>
-  
-  
-  <div class="row height-custom justify-content-center align-items-center py-5">
+
     @forelse ($articles as $article)
-        <div class="col-12 col-md-3 mb-4">
+        <div class="col-12 col-md-3 mb-4 mt-4">
             <x-card :article="$article" :categories="$categories" />
         </div>
     @empty
@@ -27,5 +37,7 @@
             </h3>
         </div>
     @endforelse
+
   </div>
+
 </x-layout>
