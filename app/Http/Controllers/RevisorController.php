@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
@@ -26,5 +29,10 @@ class RevisorController extends Controller
         return redirect()
         ->back()
         ->with('message',"Hai rifiutato l'articolo $article->title");
+    }
+
+    public function becomeRevisor(){
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+        return redirect()->route('home')->with('message', 'Complimenti, Hai richiesto di diventare revisor');
     }
 }
