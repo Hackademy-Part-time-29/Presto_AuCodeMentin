@@ -22,6 +22,20 @@ class DatabaseSeeder extends Seeder
         "Articoli per Animali"
     ];
 
+            
+
+    public $revisors = [
+        ['name' => 'Alessandro' , 'email' => 'alemuolo@gmail.com', 'password' => 'Abcd1234!'],
+        ['name' => 'Simone' , 'email' => 'simopele@gmail.com', 'password' => 'Abcd1234!'],
+        ['name' => 'Samuele' , 'email' => 'samubatta@gmail.com', 'password' => 'Abcd1234!'],
+        ['name' => 'Alessio' , 'email' => 'alemoro@gmail.com', 'password' => 'Abcd1234!'],
+        ['name' => 'Andrea' , 'email' => 'andreafica@gmail.com', 'password' => 'Abcd1234!']
+    ];
+
+
+
+
+
     public function run(): void
     {
         // User::factory(10)->create();
@@ -29,6 +43,15 @@ class DatabaseSeeder extends Seeder
         foreach ($this->categories as $category){
             Category::create([
                 'name' => $category
+            ]);
+        }
+
+        foreach ($this->revisors as $revisor){
+            User::create([
+                'name' => $revisor['name'],
+                'email' => $revisor['email'],
+                'password'=> $revisor['password'],
+                'is_revisor'=>true
             ]);
         }
         
