@@ -48,6 +48,12 @@
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li> --}}
+
+                <form role="search" action="{{route('article.search')}}" method="GET" class="d-flex" role="search">
+                    <button class="btn btn-outline-secondary" type="submit" id="basic-addon2">Search</button>
+                    <input class="form-control ms-2" type="search" name="query" placeholder="Search" aria-label="Search">
+                </form>
+
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-person"></i> {{auth()->user()->name ?? "Utente"}}</a>
