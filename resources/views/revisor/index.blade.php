@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
                     <h1>{{ $article_to_check->title }}</h1>
-                    <h3>Autore: {{ $article_to_check->user->name }}</h3>
+                    <h3>Autore: {{ $article_to_check->user->name ?? null }}</h3>
                     <h4>{{ $article_to_check->price }}€</h4>
                     <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
                     <p class="h6">{{ $article_to_check->description }}</p>
