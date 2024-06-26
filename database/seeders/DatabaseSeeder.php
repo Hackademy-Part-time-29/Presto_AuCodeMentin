@@ -69,7 +69,8 @@ class DatabaseSeeder extends Seeder
                 'title' => $article['title'],
                 'category_id' => $article['category_id'],
                 'description' => $article['description'],
-                'price' => $article['price']
+                'price' => $article['price'],
+                'is_accepted'=> true
             ]);
         }
         

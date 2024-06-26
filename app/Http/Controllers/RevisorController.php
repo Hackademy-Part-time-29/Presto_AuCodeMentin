@@ -14,7 +14,8 @@ class RevisorController extends Controller
 {
     public function index(){
         $article_to_check = Article::where('is_accepted', null)->first();
-    return view('revisor.index', compact('article_to_check'));
+        $latest_article = Article::where('is_accepted', true)->latest()->first();
+    return view('revisor.index', compact('article_to_check', 'latest_article'));
     }
 
     public function accept(Article $article)
@@ -41,5 +42,13 @@ class RevisorController extends Controller
     public function makeRevisor(User $user){
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
         return redirect()->back();
+    }
+
+    public function rollback(Article $article)
+    {
+        $article->setAccepted(null);
+        return redirect()
+        ->back()
+        ->with('message',"Hai annullato l'articolo $article->title");
     }
 }

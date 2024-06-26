@@ -18,3 +18,4 @@ Route::patch('/accept/{article}',[RevisorController::class,'accept'])->name('acc
 Route::patch('/reject/{article}',[RevisorController::class,'reject'])->name('reject');
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+Route::patch('/rollback/{article}',[RevisorController::class,'rollback'])->name('rollback');

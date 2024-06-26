@@ -16,6 +16,16 @@
                     </h1>
                 </div>
             </div>
+            @if ($latest_article)
+                <div class="col-3">
+                    <form action="{{ route('rollback',['article' => $latest_article])}}" method="POST">
+                        @csrf
+                        @method('PATCH')
+
+                        <button class="btn btn-warning py-2 px-5 fw-bold">Annulla ultima operazione</button>
+                    </form>
+                </div>
+            @endif
         </div>
         @if ($article_to_check)
             <div class="row justify-content-center pt-5">
@@ -42,6 +52,7 @@
 
                         <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
                     </form>
+                    
                     <form action="{{route('accept',['article' => $article_to_check])}}" method="POST">
                         @csrf
                         @method('PATCH')
