@@ -4,9 +4,9 @@
             <div class="col-5 alert alert-success text-center shadow rounded">
                 {{ session('message') }}
             </div>
+        </div>
     @endif
-    </div>
-
+    
     <div class="row">
         <div class="col-3">
             <div class="rounded shadow bg-body-secondary">
@@ -30,12 +30,10 @@
         <div class="row justify-content-center pt-5">
             <div class="col-md-8">
                 <div class="row justify-content-center">
-                    @for ($i = 0; $i < 6; $i++)
                         <div class="col-6 col-md-4 mb-4 text-center">
                             <img src="https://picsum.photos/308" class="img-fluid rounded shadow"
                                 alt="immagine segnaposto">
                         </div>
-                    @endfor
                 </div>
             </div>
             <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">

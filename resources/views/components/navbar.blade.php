@@ -50,7 +50,8 @@
                     role="search">
                     <div class="nav">
                         <div class="search-nav">
-                            <input class="input" type="text">
+                            <input class="input" type="search" name="query" placeholder="Search"
+                            aria-label="Search">
                             <svg viewBox="0 0 24 24" class="search__icon">
                                 <g>
                                     <path
@@ -68,15 +69,18 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
                                 class="bi bi-person"></i> {{ auth()->user()->name ?? 'Utente' }}</a>
+                                
+                            @if (Auth::user()->is_revisor)
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{ \App\Models\Article::toBeRevisedCount() }}
+                                </span>
+                            @endif
                         <ul class="dropdown-menu dropdown-menu-end">
                             @if (Auth::user()->is_revisor)
                                 <li class="nav-item">
                                     <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
                                         href="{{ route('revisor.index') }}">Zona revisore
-                                        <span
-                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                            {{ \App\Models\Article::toBeRevisedCount() }}
-                                        </span>
                                     </a>
                                 </li>
                             @endif
