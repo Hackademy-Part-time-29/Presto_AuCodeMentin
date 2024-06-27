@@ -1,4 +1,4 @@
-<footer class="bg-light text-center text-lg-start mt-auto">
+<footer class="footer bg-light text-center text-lg-start mt-auto">
     <div class="container p-4">
       <div class="row">
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
@@ -16,7 +16,7 @@
           <h5>Vuoi diventare revisore?</h5>
           <p>Cliccando il bottone sottostante farai richiesta al nostro admin</p>
 
-          <a href="{{route('become.revisor')}}" class="btn btn-success">Diventa revisore</a>
+          <a href="{{route('become.revisor')}}" class="btn btn-custom">Diventa revisore</a>
         </div>
       </div>
     </div>

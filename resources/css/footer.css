@@ -1,0 +1,7 @@
+.content {
+  min-height: calc(100vh - 100px); /* 100px is the height of the footer */
+}
+
+.footer {
+  height: 100px; /* Adjust the height of the footer */
+}
