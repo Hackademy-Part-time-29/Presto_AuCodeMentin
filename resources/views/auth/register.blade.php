@@ -56,6 +56,9 @@
                     <input class="input" name="password" type="password" class="form-control" placeholder="Password">
                     <input class="input" name="password_confirmation" type="password" class="form-control" placeholder="Ripeti password">                    
                     <input class="login-button" type="submit" value="Registrati">
+                    <span class="forgot-password">
+                        <a href="{{ route('login') }}">Se sei già registrato, accedi!</a>
+                    </span>
                 </form>
                 {{-- <div class="social-account-container">
                     <span class="title">Or Sign in with</span>
