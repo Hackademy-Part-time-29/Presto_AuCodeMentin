@@ -41,7 +41,7 @@
                     <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
                     <input class="input" name="password" type="password" class="form-control" placeholder="Password">
                     <span class="forgot-password">
-                        <a href="/forgot-password">Password dimenticata?</a>
+                        <a href="{{route('password.request')}}">Password dimenticata?</a>
                     </span>
                     <span class="forgot-password">
                         <a href="{{ route('register') }}">Se non sei registrato, fallo subito!</a>
