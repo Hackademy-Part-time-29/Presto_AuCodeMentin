@@ -6,9 +6,13 @@ use App\Models\Article;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class CreateArticleForm extends Component
 {
+
+    use WithFileUploads;
+
     #[Validate('required|min:5')]
     public $title;
     #[Validate('required|min:10')]
@@ -18,6 +22,8 @@ class CreateArticleForm extends Component
     #[Validate('required')]
     public $category;
     public $article;
+    public $images = [];
+    public $temporary_images;
 
     public function store(){
 

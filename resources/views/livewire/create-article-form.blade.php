@@ -59,6 +59,10 @@
             </p>
         @enderror
 
+        <div class="mb-3">
+            <input type="file" wire:model.live=>
+        </div>
+
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-dark">Crea</button>
         </div>
