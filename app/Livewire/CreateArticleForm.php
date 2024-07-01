@@ -36,8 +36,23 @@ class CreateArticleForm extends Component
             'user_id' => Auth::id()
         ]);
 
-        $this->reset();
+        if (count($this->images) > 0){
+            foreach($this->images as $image){
+                $this->article->images()->create(['path' => $image->store('images', 'public')]);
+            }
+        }
+
         session()->flash('success', 'Articolo creato con successo!');
+        $this->cleanForm();
+    }
+
+    protected function cleanForm()
+    {
+        $this->title = '';
+        $this->description = '';
+        $this->category = '';
+        $this->price = '';
+        $this->images = [];
     }
 
     public function render()
@@ -54,6 +69,13 @@ class CreateArticleForm extends Component
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
+        }
+    }
+
+    public function removeImage($key)
+    {
+        if(in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
         }
     }
 }
