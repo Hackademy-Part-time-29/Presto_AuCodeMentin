@@ -209,3 +209,12 @@
     color: #0099ff;
     font-size: 9px;
   }
+
+  /* Custom Img Preview */
+  .img-preview {
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+  }
