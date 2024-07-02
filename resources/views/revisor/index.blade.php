@@ -40,8 +40,8 @@
                 @else    
                     @for ($i = 0; $i < 6; $i++)
                         <div class="col-6 col-md-4 mb-4 text-center">
-                            <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : https://picsum.photos/308 }}"
-                             class="img-fluid rounded shadow" alt="immagine segnaposto {{ $article->title }}">
+                            <img src="https://picsum.photos/308"
+                             class="img-fluid rounded shadow" alt="immagine segnaposto">
                         </div>
                     @endfor
                 @endif
