@@ -1,52 +1,59 @@
 <x-layout>
-    {{-- 
-  <div class="row">
-      <div class="col-12">
-          <form method="POST" action="/login">
-              @csrf
-              <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input name="email" type="email" class="form-control" required>
-                  <div class="form-text">Non condivideremo la tua email mai con nessuno.</div>
-              </div>
-              @error('email')
-                  <p class="fst-italic text-danger">
-                      {{ $message }}
-                  </p>
-              @enderror
-              <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
-                  <input name="password" type="password" class="form-control" required>
-              </div>
-              @error('password')
-                  <p class="fst-italic text-danger">
-                      {{ $message }}
-                  </p>
-              @enderror
-              <div class="mb-3 form-check">
-                  <input name="remember" type="checkbox" class="form-check-input">
-                  <label class="form-check-label" for="remember">Ricordami</label>
-              </div>
-              <button type="submit" class="btn btn-primary">Accedi</button>
-          </form>
-          <a class="btn btn-link" href="{{ route('register') }}">Se non sei registrato, fallo subito!</a>
-      </div>
-  </div> --}}
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center card-container">
+        {{-- Inizio form login --}}
         <div class="login row ">
             <div class="col-12">
                 <div class="heading">Accedi</div>
                 <form method="POST" action="/login" class="form">
                     @csrf
                     <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
+                    @error('email')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <input class="input" name="password" type="password" class="form-control" placeholder="Password">
+                    @error('password')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <span class="forgot-password">
-                        <a href="{{route('password.request')}}">Password dimenticata?</a>
+                        <a href="{{ route('password.request') }}">Password dimenticata?</a>
                     </span>
                     <span class="forgot-password">
                         <a href="{{ route('register') }}">Se non sei registrato, fallo subito!</a>
                     </span>
                     <input class="login-button" type="submit" value="Sign In">
+                </form>
+                {{-- Inizio form registrazione --}}
+                <div class="heading">Registrati ora</div>
+                <form method="POST" action="/register" class="form">
+                    @csrf
+                    <input class="input" name="name" type="text" class="form-control" placeholder="Nome">
+                    @error('name')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
+                    @error('email')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input class="input" name="password" type="password" class="form-control" placeholder="Password">
+                    @error('password')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input class="input" name="password_confirmation" type="password" class="form-control"
+                        placeholder="Ripeti password">
+                    <input class="login-button" type="submit" value="Registrati">
+                    <span class="forgot-password">
+                        <a href="{{ route('login') }}">Se sei già registrato, accedi!</a>
+                    </span>
                 </form>
                 {{-- <div class="social-account-container">
                     <span class="title">Or Sign in with</span>
@@ -76,6 +83,9 @@
                 </div> --}}
 
             </div>
-        </div>
+        </div> {{--Fine form login--}}
+        {{-- Inizio form registrazione --}}
+        
     </div>
+
 </x-layout>

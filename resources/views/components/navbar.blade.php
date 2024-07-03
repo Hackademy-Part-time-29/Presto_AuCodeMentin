@@ -35,7 +35,7 @@
                 </li>
 
             </ul>
-            <ul class="navbar-nav mb-2 mb-lg-0">
+            <ul class="navbar-nav">
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li> --}}
@@ -49,7 +49,9 @@
 
                 <livewire:search />
 
-
+                <x-_locale lang="it" />
+                <x-_locale lang="en" />
+                <x-_locale lang="es" />
 
                 @auth
                     <li class="nav-item dropdown">

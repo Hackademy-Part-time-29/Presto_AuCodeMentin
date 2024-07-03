@@ -1,50 +1,4 @@
 <x-layout>
-
-    {{-- <div class="row">
-        <div class="col-12">
-            <form method="POST" action="/register">
-                @csrf
-
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nome</label>
-                    <input name="name" type="text" class="form-control">
-                </div>
-                @error('name')
-                    <p class="fst-italic text-danger">
-                        {{ $message }}
-                    </p>
-                @enderror
-
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input name="email" type="email" class="form-control">
-                </div>
-                @error('email')
-                    <p class="fst-italic text-danger">
-                        {{ $message }}
-                    </p>
-                @enderror
-
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input name="password" type="password" class="form-control">
-                </div>
-                @error('password')
-                    <p class="fst-italic text-danger">
-                        {{ $message }}
-                    </p>
-                @enderror
-
-                <div class="mb-3">
-                    <label for="password_confirmation" class="form-label">Conferma Password</label>
-                    <input name="password_confirmation" type="password" class="form-control">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Registrati</button>
-            </form>
-        </div>
-    </div> --}}
-
     <div class="d-flex justify-content-center">
         <div class="login row ">
             <div class="col-12">
@@ -52,9 +6,25 @@
                 <form method="POST" action="/register" class="form">
                     @csrf
                     <input class="input" name="name" type="text" class="form-control" placeholder="Nome">
+                    @error('name')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
+                    @error('email')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <input class="input" name="password" type="password" class="form-control" placeholder="Password">
-                    <input class="input" name="password_confirmation" type="password" class="form-control" placeholder="Ripeti password">                    
+                    @error('password')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input class="input" name="password_confirmation" type="password" class="form-control"
+                        placeholder="Ripeti password">
                     <input class="login-button" type="submit" value="Registrati">
                     <span class="forgot-password">
                         <a href="{{ route('login') }}">Se sei già registrato, accedi!</a>

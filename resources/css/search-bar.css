@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .nav {
     position: relative;
     background: linear-gradient(135deg, rgb(179, 208, 253) 0%, rgb(164, 202, 248) 100%);
@@ -75,4 +81,41 @@
 
 .search__icon path {
     fill: white;
+}
+
+
+/* Search bar custom */
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.box{
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover .input-search{
+    width: 200px;
+}
+
+.box .input-search{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box a .bi{
+    font-size: 18px;
 }
