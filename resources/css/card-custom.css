@@ -15,24 +15,24 @@ img{
 
 /*========= Style card custom =========*/
 
-.card-custom-2{
+.cardCustom{
     display: grid;
     place-items: center;
     margin-inline: 1.5rem;
     padding-block: 5rem;
 }
 
-.card-container-2{
+.cardContainer{
     display: grid;
     row-gap: 3.5rem;
 }
 
-.card-article{
+.cardArticle{
     position: relative;
     overflow: hidden;
 }
 
-.card-img{    
+.cardImg{    
     display: block;
     max-width: 100%;
     height: auto;
@@ -40,7 +40,7 @@ img{
     border-radius: 1.5rem;
 }
 
-.cart-content{
+.cardContent{
     width: 280px;
     background-color: hsl(0, 0%, 100%);
     padding: 1.5rem 2rem;
@@ -59,21 +59,21 @@ img{
 
 /* Naming animations in hover */
 
-.card-article:hover .cart-content{
+.cardArticle:hover .cardContent{
     animation: show-data 1s forwards;
     opacity: 1;
     transition: opacity .3s;
 }
 
-.card-article:hover{
+.cardArticle:hover{
     animation: remove-overflow 2s forwards;
 }
 
-.card-article:not(:hover){
+.cardArticle:not(:hover){
     animation: show-overflow 2s forwards;
 }
 
-.card-article:not(:hover) .cart-content{
+.cardArticle:not(:hover) .cardContent{
     animation: remove-data 1s forwards;
 }
 
