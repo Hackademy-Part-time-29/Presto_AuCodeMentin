@@ -1,0 +1,118 @@
+/*========= Base =========*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+
+
+/*========= Style card custom =========*/
+
+.card-custom-2{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.card-container-2{
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card-article{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img{    
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.cart-content{
+    width: 280px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -12rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+/*========= Animation card custom =========*/
+
+/* Naming animations in hover */
+
+.card-article:hover .cart-content{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card-article:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card-article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card-article:not(:hover) .cart-content{
+    animation: remove-data 1s forwards;
+}
+
+/* card animation */
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: rotateY(-7rem);
+    }
+    50%{
+        transform: rotateY(-10rem);
+    }
+    100%{
+        transform: rotateY(.5rem);
+    }
+
+}
+
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        /* pointer-events: none; */
+    }
+    50%{
+        overflow: hidden;
+    }
+}

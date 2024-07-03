@@ -41,7 +41,7 @@
         </div>
 
         @forelse ($articles as $article)
-            <div class="col-12 col-md-3 mb-4 mt-4">
+            <div class="">
                 <x-card :article="$article" :categories="$categories" />
             </div>
         @empty

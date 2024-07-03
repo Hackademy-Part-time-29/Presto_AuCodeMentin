@@ -26,6 +26,35 @@
                     </span>
                     <input class="login-button" type="submit" value="Sign In">
                 </form>
+                {{-- Inizio form registrazione --}}
+                <div class="heading">Registrati ora</div>
+                <form method="POST" action="/register" class="form">
+                    @csrf
+                    <input class="input" name="name" type="text" class="form-control" placeholder="Nome">
+                    @error('name')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
+                    @error('email')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input class="input" name="password" type="password" class="form-control" placeholder="Password">
+                    @error('password')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <input class="input" name="password_confirmation" type="password" class="form-control"
+                        placeholder="Ripeti password">
+                    <input class="login-button" type="submit" value="Registrati">
+                    <span class="forgot-password">
+                        <a href="{{ route('login') }}">Se sei già registrato, accedi!</a>
+                    </span>
+                </form>
                 {{-- <div class="social-account-container">
                     <span class="title">Or Sign in with</span>
                     <div class="social-accounts">
