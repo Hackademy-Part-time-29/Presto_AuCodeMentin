@@ -22,17 +22,17 @@ img{
     padding-block: 5rem;
 }
 
-.cardContainer{
+.card__container{
     display: grid;
     row-gap: 3.5rem;
 }
 
-.cardArticle{
+.card__article{
     position: relative;
     overflow: hidden;
 }
 
-.cardImg{    
+.card__img{    
     display: block;
     max-width: 100%;
     height: auto;
@@ -40,7 +40,7 @@ img{
     border-radius: 1.5rem;
 }
 
-.cardContent{
+.card__data{
     width: 280px;
     background-color: hsl(0, 0%, 100%);
     padding: 1.5rem 2rem;
@@ -59,21 +59,21 @@ img{
 
 /* Naming animations in hover */
 
-.cardArticle:hover .cardContent{
+.card__article:hover .card__data{
     animation: show-data 1s forwards;
     opacity: 1;
     transition: opacity .3s;
 }
 
-.cardArticle:hover{
+.card__article:hover{
     animation: remove-overflow 2s forwards;
 }
 
-.cardArticle:not(:hover){
+.card__article:not(:hover){
     animation: show-overflow 2s forwards;
 }
 
-.cardArticle:not(:hover) .cardContent{
+.card__article:not(:hover) .card__data{
     animation: remove-data 1s forwards;
 }
 
@@ -96,13 +96,13 @@ img{
 
 @keyframes remove-data{
     0%{
-        transform: rotateY(-7rem);
+        transform: translateY(-7rem);
     }
     50%{
-        transform: rotateY(-10rem);
+        transform: translateY(-10rem);
     }
     100%{
-        transform: rotateY(.5rem);
+        transform: translateY(.5rem);
     }
 
 }
@@ -110,7 +110,7 @@ img{
 @keyframes show-overflow{
     0%{
         overflow: initial;
-        /* pointer-events: none; */
+        pointer-events: none;
     }
     50%{
         overflow: hidden;
