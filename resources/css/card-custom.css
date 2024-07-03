@@ -35,8 +35,8 @@ img{
 .card__img{    
     display: block;
     max-width: 100%;
-    height: auto;
-    width: 328px;
+    height: 300px;
+    width: 300px;
     border-radius: 1.5rem;
 }
 
@@ -81,7 +81,7 @@ img{
 
 @keyframes show-data{
     50%{
-        transform: translateY(-10rem);
+        transform: translateY(-12rem);
     }
     100%{
         transform: translateY(-7rem);
@@ -99,7 +99,7 @@ img{
         transform: translateY(-7rem);
     }
     50%{
-        transform: translateY(-10rem);
+        transform: translateY(-12rem);
     }
     100%{
         transform: translateY(.5rem);
