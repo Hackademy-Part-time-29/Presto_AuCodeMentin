@@ -20,8 +20,6 @@
 <form role="search" action="{{ route('article.search') }}" method="GET" class="d-flex" role="search">
     <div class="box">
         <input class="input-search" type="search" name="query" placeholder="Search..." aria-label="Search">
-        <a href="#">
-            <i class="bi bi-search"></i>
-        </a>
+        <button type="submit"><i class="bi bi-search"></i></button>
     </div>
 </form>

@@ -41,7 +41,7 @@ img{
 }
 
 .card__data{
-    width: 280px;
+    width: 90%;
     background-color: hsl(0, 0%, 100%);
     padding: 1.5rem 2rem;
     box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);

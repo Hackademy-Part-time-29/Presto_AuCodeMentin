@@ -39,7 +39,6 @@ class DatabaseSeeder extends Seeder
         ['title' => 'Casco', 'category_id' => 9, 'description' => "Vendo casco con supporto per l'interphono", 'price' => '400'],
         ['title' => 'Tastiera meccanica pc', 'category_id' => 1, 'description' => 'Regalo tastiera meccanica rgbper pc', 'price' => '0'],
         ['title' => 'Allegro chirurgo', 'category_id' => 7, 'description' => 'Vendo Allegro Chirurgo dato che mio figlio ha 33 anni', 'price' => '22'],
-
     ];
 
 
