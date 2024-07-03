@@ -11,7 +11,7 @@
 
     <div class="row rounded-gradient align-items-center m-auto">
         <div class="col-md-6">
-            <h1>Benvenuti su {{ env('APP_NAME') }}</h1>
+            <h1> {{ __('home.welcome') }} {{ env('APP_NAME') }}</h1>
             <h4>Inserisci un annuncio per vendere ciò che speri possa regalare le stesse emozioni che hai avuto tu!</h4>
 
         </div>
