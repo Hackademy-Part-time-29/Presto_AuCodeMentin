@@ -22,14 +22,14 @@
 
 
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center py-5">
             @if (session()->has('errorMessage'))
                 <div class="alert alert-danger text-center shadow rounded w-50 mx-auto">
                     {{ session('errorMessage') }}
                 </div>
             @endif
             
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 pb-4">
                 <h1>Articoli più recenti</h1>
             </div>
             
@@ -38,7 +38,7 @@
             </div>
 
             @forelse ($articles as $article)
-                <div class="col-md-6 col-lg-3 col-xs-12 ">
+                <div class="col-md-6 col-lg-3 col-xs-12 pb-5">
                     <x-card :article="$article" :categories="$categories" />
                 </div>
             @empty
