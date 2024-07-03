@@ -10,7 +10,7 @@
 <body>
     <x-navbar/>
 
-        <div class="container m-custom content">
+        <div class="m-custom content">
             {{$slot}}
         </div>
     
