@@ -2,9 +2,8 @@
 return [
     //Homepage
     'welcome' => 'Welcome to',
-    'descWelcome'=>'',
-    'descCc'=>'',
-    'newArticles'=>'',
-    'allArticles' => '',
-    'addArticle'=> '',
+    'desc_welcome'=>'',
+    'new_articles'=>'',
+    'all_articles' => '',
+    'add_article'=> '',
 ];

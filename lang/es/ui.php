@@ -8,9 +8,9 @@ return [
     // Footer
     'contacts' => '',
     'phone' => '',
-    'call-revisor' => '',
-    'descRevisor' => '',
-    'btnRevisor' => '',
+    'call_revisor' => '',
+    'desc_evisor' => '',
+    'btn_revisor' => '',
     'price' => '',
     'description' => '',
 ];
