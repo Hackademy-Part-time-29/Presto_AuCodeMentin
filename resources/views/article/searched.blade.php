@@ -3,7 +3,7 @@
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
                 <!-- Ricerca effettuata dall'utente -->
-                <h1 class="display-2">Risultati per la ricerca <span class="fst-italic fw-bold">{{ $query }}</span></h1>
+                <h1 class="display-2">{{__('search.head')}} <span class="fst-italic fw-bold">{{ $query }}</span></h1>
             </div>
         </div>
 
@@ -15,9 +15,9 @@
                 </div>
             @empty
                 <div class="col-12 text-center">
-                    <h3>Nessun articolo corrispondente alla tua ricerca!</h3>
+                    <h3>{{__('search.not_article')}}</h3>
                     @auth
-                        <a class="btn btn-custom my-5" href="{{ route('article.create') }}">Pubblica un articolo</a>
+                        <a class="btn btn-custom my-5" href="{{ route('article.create') }}">{{__('search.btn_add')}}</a>
                     @endauth
                 </div>
             @endforelse

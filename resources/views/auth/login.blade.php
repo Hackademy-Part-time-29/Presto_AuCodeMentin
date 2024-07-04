@@ -3,7 +3,7 @@
         {{-- Inizio form login --}}
     {{-- <div class="login row ">
             <div class="col-12">
-                <div class="heading">Accedi</div>
+                <div class="heading">{{__('authForm.login')}}</div>
                 <form method="POST" action="/login" class="form">
                     @csrf
                     <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
@@ -19,15 +19,15 @@
                         </p>
                     @enderror
                     <span class="forgot-password">
-                        <a href="{{ route('password.request') }}">Password dimenticata?</a>
+                        <a href="{{ route('password.request') }}">{{__('authForm.forgotten_pass')}}</a>
                     </span>
                     <span class="forgot-password">
-                        <a href="{{ route('register') }}">Se non sei registrato, fallo subito!</a>
+                        <a href="{{ route('register') }}">{{__('authForm.register_msg')}}</a>
                     </span>
-                    <input class="login-button" type="submit" value="Sign In">
+                    <input class="login-button" type="submit" value="{{__('authForm.sign_in')}}">
                 </form>
                 {{-- Inizio form registrazione --}}
-    {{-- <div class="heading">Registrati ora</div>
+                <div class="heading">{{__('authForm.register')}}</div>
                 <form method="POST" action="/register" class="form">
                     @csrf
                     <input class="input" name="name" type="text" class="form-control" placeholder="Nome">
@@ -52,7 +52,7 @@
                         placeholder="Ripeti password">
                     <input class="login-button" type="submit" value="Registrati">
                     <span class="forgot-password">
-                        <a href="{{ route('login') }}">Se sei già registrato, accedi!</a>
+                        <a href="{{ route('login') }}">{{__('authForm.register_msg')}}</a>
                     </span>
                 </form> --}}
     {{-- <div class="social-account-container">

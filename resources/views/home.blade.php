@@ -12,7 +12,7 @@
         <div class="col-md-6">
             <h1> {{ __('home.welcome') }} {{ env('APP_NAME') }}</h1>
             <h4>Inserisci un annuncio per vendere ciò che speri possa regalare le stesse emozioni che hai avuto tu!</h4>
-            <a href="{{ route('article.create') }}" class="btn btnCustom me-3"><i class="bi bi-plus-circle"></i> Inserisci un annuncio</a>
+            <a href="{{ route('article.create') }}" class="btn btnCustom me-3"><i class="bi bi-plus-circle"></i> {{__('home.add_article')}}</a>
 
         </div>
         <div class="col-md-6 text-md-end text-center">
@@ -30,11 +30,11 @@
             @endif
             
             <div class="col-12 col-md-6 pb-4">
-                <h1>Articoli più recenti</h1>
+                <h1>{{__('home.new_articles')}}</h1>
             </div>
             
             <div class="col-12 col-md-6 text-end">
-                <a href="{{ route('article.index') }}" class="btn btnCustom">Tutti gli articoli</a>
+                <a href="{{ route('article.index') }}" class="btn btnCustom">{{__('home.all_articles')}}</a>
             </div>
 
             @forelse ($articles as $article)
