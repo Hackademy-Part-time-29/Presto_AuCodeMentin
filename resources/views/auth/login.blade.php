@@ -89,9 +89,9 @@
     {{-- </div> --}}
 
 
-    <div class="container__login container heightCustom">
+    <div class="container__login heightCustom">
         <div class="forms__container row">
-            <div class="signin-signup">
+            <div class="signin__signup">
                 <form action="" class="signin__form">
                     <h2 class="title__form">Accedi</h2>
                     <div class="input__field">
@@ -102,7 +102,7 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="input__custom" type="password" placeholder="Password">
                     </div>
-                    <input type="submit" value="Login" class="btn btnCustom mt-2 mb-2">
+                    <input type="submit" value="Accedi" class="btn btnCustom mt-2 mb-2">
 
                     <p class="social__text">Entra con un social network</p>
                     <div class="social__media justify-content-center row">
@@ -118,19 +118,23 @@
                     </div>
                 </form>
 
-                <form action="" class="signin__form">
-                    <h2 class="title__form">Accedi</h2>
+                <form action="" class="signup__form">
+                    <h2 class="title__form">Registrati</h2>
                     <div class="input__field">
                         <i class="bi bi-person-fill text-center"></i>
                         <input class="input__custom" type="text" placeholder="Username">
                     </div>
                     <div class="input__field">
+                        <i class="bi bi-envelope-fill text-center"></i>
+                        <input class="input__custom" type="mail" placeholder="Email">
+                    </div>
+                    <div class="input__field">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="input__custom" type="password" placeholder="Password">
                     </div>
-                    <input type="submit" value="Login" class="btn btnCustom mt-2 mb-2">
+                    <input type="submit" value="Registrati" class="btn btnCustom mt-2 mb-2">
 
-                    <p class="social__text">Entra con un social network</p>
+                    <p class="social__text">Registrati con un social network</p>
                     <div class="social__media justify-content-center row">
                         <div class="social__icon d-flex justify-content-center align-items-center">
                             <i class="bi bi-github"></i>
@@ -144,6 +148,30 @@
                     </div>
                 </form>
             </div>
+            <div class="panels__container">
+                <div class="panel__custom left__panel">
+                    <div class="content">
+                        <h3>Sei nuovo?</h3>
+                        <p>Registrati per inserire nuovi annunci?</p>
+                        <button class="btn btnCustom " id="sign-in-btn"></button>
+                    </div>
+
+                    <img src="{{ asset('img/login.svg') }}" class="img__auth" alt="">
+                </div>
+            </div>
+
+            <div class="panels__container">
+                <div class="panel__custom right__panel">
+                    <div class="content">
+                        <h3>Sei già registrato??</h3>
+                        <p>Accedi per inserire nuovi annunci?</p>
+                        <button class="btn btnCustom" id="sign-up-btn"></button>
+                    </div>
+
+                    <img src="{{ asset('img/register.svg') }}" class="img__auth" alt="">
+                </div>
+            </div>
+
         </div>
     </div>
 
