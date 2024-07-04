@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         "Giochi e Giocattoli",
         "Libri, Film e Musica",
         "Auto e Moto",
-        "Articoli per Animali"
+        "Articoli per Animali",
     ];
 
             
