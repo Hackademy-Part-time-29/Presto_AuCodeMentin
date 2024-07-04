@@ -2,10 +2,10 @@
     <div class="d-flex justify-content-center">
         <div class="login row ">
             <div class="col-12">
-                <div class="heading">Registrati ora</div>
+                <div class="heading">{{__('authForm.register_title')}}</div>
                 <form method="POST" action="/register" class="form">
                     @csrf
-                    <input class="input" name="name" type="text" class="form-control" placeholder="Nome">
+                    <input class="input" name="name" type="text" class="form-control" placeholder="{{__('authForm.name')}}">
                     @error('name')
                         <p class="fst-italic text-danger">
                             {{ $message }}
@@ -24,10 +24,10 @@
                         </p>
                     @enderror
                     <input class="input" name="password_confirmation" type="password" class="form-control"
-                        placeholder="Ripeti password">
-                    <input class="login-button" type="submit" value="Registrati">
+                        placeholder="{{__('authForm.repeat_pass')}}">
+                    <input class="login-button" type="submit" value="{{__('authForm.register')}}">
                     <span class="forgot-password">
-                        <a href="{{ route('login') }}">Se sei già registrato, accedi!</a>
+                        <a href="{{ route('login') }}">{{__('authForm.register_msg')}}</a>
                     </span>
                 </form>
                 {{-- <div class="social-account-container">

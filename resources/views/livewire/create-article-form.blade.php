@@ -12,7 +12,7 @@
     <form class="bg-body-tertiary shadow rounded p-5 my-5" wire:submit="store">
 
         <div class="mb-3">
-            <label for="title" class="form-label">Titolo :</label>
+            <label for="title" class="form-label">{{__('create-article.title')}} :</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                 wire:model.blur="title">
         </div>
@@ -23,7 +23,7 @@
         @enderror
 
         <div class="mb-3">
-            <label for="description" class="form-label">Descrizione :</label>
+            <label for="description" class="form-label">{{__('create-article.description')}} :</label>
             <textarea id="description" cols="30" rows="10" class="form-control @error('title') is-invalid @enderror"
                 wire:model.blur="description"></textarea>
         </div>
@@ -34,7 +34,7 @@
         @enderror
 
         <div class="mb-3">
-            <label for="price" class="form-label">Prezzo in € :</label>
+            <label for="price" class="form-label">{{__('create-article.price_in')}} :</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" id="price"
                 wire:model.blur="price">
         </div>
@@ -45,9 +45,9 @@
         @enderror
 
         <div class="mb-3">
-            <label for="category">Seleziona una categoria :</label>
+            <label for="category">{{__('create-article.select_cat')}} :</label>
             <select id="category" wire:model.blur="category" class="form-control @error('title') is-invalid @enderror">
-                <option label>-- Seleziona --</option>
+                <option label> --{{__('create-article.selezione')}}-- </option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
@@ -72,7 +72,7 @@
         @if (!empty($images))
             <div class="row">
                 <div class="col-12">
-                    <p>Preview Foto: </p>
+                    <p>{{__('create-article.prev-photo')}}: </p>
                     <div class="row border border-4 border-success rounded shadow py-4">
                         @foreach ($images as $key=>$image)
                             <div class="col d-flex flex-column align-items-center my-3">
@@ -87,7 +87,7 @@
         @endif
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-dark">Crea</button>
+            <button type="submit" class="btn btn-dark">{{__('create-article.btn_create')}}</button>
         </div>
     </form>
 </div>

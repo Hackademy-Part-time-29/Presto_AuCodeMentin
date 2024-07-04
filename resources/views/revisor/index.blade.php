@@ -11,7 +11,7 @@
         <div class="col-3">
             <div class="rounded shadow bg-body-secondary">
                 <h1 class="display-5 text-center pb-2">
-                    Dashboard revisore
+                    {{__('revisor.dashboard')}}
                 </h1>
             </div>
         </div>
@@ -21,7 +21,7 @@
                     @csrf
                     @method('PATCH')
 
-                    <button class="btn btn-warning py-2 px-5 fw-bold">Annulla ultima operazione</button>
+                    <button class="btn btn-warning py-2 px-5 fw-bold">{{__('revisor.btn_last')}}</button>
                 </form>
             </div>
         @endif
@@ -50,7 +50,7 @@
             </div>
             <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
                 <h1>{{ $article_to_check->title }}</h1>
-                <h3>Autore: {{ $article_to_check->user->name ?? null }}</h3>
+                <h3>{{__('revisor.author')}}: {{ $article_to_check->user->name ?? null }}</h3>
                 <h4>{{ $article_to_check->price }}€</h4>
                 <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
                 <p class="h6">{{ $article_to_check->description }}</p>
@@ -60,14 +60,14 @@
                     @csrf
                     @method('PATCH')
 
-                    <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
+                    <button class="btn btn-danger py-2 px-5 fw-bold">{{__('revisor.btn_accept')}}</button>
                 </form>
 
                 <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
                     @csrf
                     @method('PATCH')
 
-                    <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
+                    <button class="btn btn-success py-2 px-5 fw-bold">{{__('revisor.btn_accept')}}</button>
                 </form>
             </div>
         </div>
@@ -75,9 +75,9 @@
         <div class="row justify-content-center align-items-center height-custom text-center">
             <div class="col-12">
                 <h1 class="fst-italic display-4">
-                    Nessun articolo da revisionare
+                    {{__('revisor.head')}}
                 </h1>
-                <a href="{{ route('home') }}" class="mt-5 btn btn-custom">Torna all'homepage</a>
+                <a href="{{ route('home') }}" class="mt-5 btn btn-custom">{{__('revisor.btn_back')}}</a>
             </div>
         </div>
     @endif

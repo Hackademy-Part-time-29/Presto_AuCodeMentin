@@ -1,12 +1,12 @@
 <?php
 return [
-    'login'=>'',
-    'forgotten_pass'=>'',
-    'register_msg'=>'',
-    'sign_in'=>'',
-    'register'=>'',
-    'register_title'=>'',
-    'name'=>'',
-    'repeat_pass'=>'',
-    'login_msg'=>'',
+    'login'=>'Accede',
+    'forgotten_pass'=>'Contraseña olvidada?',
+    'register_msg'=>'Si ya estás registrado ¡Accede!',
+    'sign_in'=>'Entrar',
+    'register'=>'registrate',
+    'register_title'=>'Registrate ahora',
+    'name'=>'Nombre',
+    'repeat_pass'=>'Repite password',
+    'login_msg'=>'Si no estás registrado ¡Hagalo inmediatamente!',
 ];

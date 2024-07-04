@@ -1,5 +1,5 @@
 <?php
 return [
-    'all_articles'=>'',
-    'btn_detail'=>'',
+    'all_articles'=>'Tutti gli articoli',
+    'btn_detail'=>'Dettagli',
 ];

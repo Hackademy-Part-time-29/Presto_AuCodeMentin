@@ -6,7 +6,9 @@ return [
     'login' => '',
     'signup' => '',
     // Footer
-    'contacts' => '',
+    'contacts'=>'',
+    'descContats'=>'',
+    'info' => '',
     'phone' => '',
     'call_revisor' => '',
     'desc_evisor' => '',
