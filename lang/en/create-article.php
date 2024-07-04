@@ -1,14 +1,13 @@
 <?php
 return [
-    'head'=>'',
-    'title'=>'',
-    'description'=>'',
-    'price_in'=>'',
-    'select_cat'=>'',
-    'select_file'=>'',
-    'selezione'=>'',
-    'prev-photo'=>'',
-    'not_selected_file'=>'',
-    'btn_create'=>'',
-
+    'head'=>'Publish an article',
+    'title'=>'Title:',
+    'description'=>'Description:',
+    'price_in'=>'Price in €:',
+    'select_cat'=>'Choose a category:',
+    'select_file'=>'Pick files',
+    'selezione'=>'Selection',
+    'prev-photo'=>'Photo preview',
+    'not_selected_file'=>'No file chosen',
+    'btn_create'=>'Create',
 ];

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'reset' => 'La tua passwordè stata reimpostata',
+    'reset' => 'La tua password è stata reimpostata',
     'sent' => 'Abbiamo inviato via email il link per reimpostare la tua password.',
     'throttled' => 'Attendere prima di riprovare, per favore.',
     'token' => 'Questo codice di reimpostazione della password non è valido.',

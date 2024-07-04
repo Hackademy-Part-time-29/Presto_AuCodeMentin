@@ -1,6 +1,6 @@
 <?php
 return [
-    'head'=>'Publica un articolo',
+    'head'=>'Pubblica un articolo',
     'title'=>'Titolo:',
     'description'=>'Descrizione:',
     'price_in'=>'Prezzo in €:',

@@ -15,6 +15,6 @@ return [
 
     'failed' => 'Estas credenciales no corresponden a nuestros archivos',
     'password' => 'La contraseña es incorrecta',
-    'throttle' => 'Demasiados intentos de acceso. Intentar otra vez después de 60 segundos.',
+    'throttle' => 'Demasiados intentos de acceso. Intentar otra vez después de :seconds segundos.',
 
 ];
