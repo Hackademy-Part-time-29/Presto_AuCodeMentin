@@ -1,7 +1,7 @@
 <x-layout>
-    {{-- <div class="d-flex justify-content-center card-container">
+    <div class="d-flex justify-content-center card-container">
         {{-- Inizio form login --}}
-    {{-- <div class="login row ">
+    <div class="login row ">
             <div class="col-12">
                 <div class="heading">{{__('authForm.login')}}</div>
                 <form method="POST" action="/login" class="form">
@@ -82,14 +82,14 @@
                     </div>
                 </div> --}}
 
-    {{-- </div> --}}
-    {{-- </div> Fine form login --}}
-    {{-- Inizio form registrazione --}}
+    {{-- </div>
+    </div> {{--Fine form login --}}
+    {{-- Inizio form registrazione--}}
 
-    {{-- </div> --}}
+    </div>
 
 
-    <div class="container__login heightCustom">
+    {{-- <div class="container__login heightCustom">
         <div class="forms__container row">
             <div class="signin__signup">
                 <form action="" class="signin__form">
@@ -173,6 +173,6 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
 
 </x-layout>

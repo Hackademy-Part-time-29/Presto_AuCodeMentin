@@ -1,5 +1,5 @@
 /* Log in */
-/* .login {
+.login {
   max-width: 350px;
   background: #F8F9FD;
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
@@ -124,7 +124,7 @@
 
 .social-account-container .social-accounts .social-button:active {
   transform: scale(0.9);
-} */
+}
 
 
 /* Login in JS */

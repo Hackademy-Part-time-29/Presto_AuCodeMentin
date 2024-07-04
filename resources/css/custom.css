@@ -12,11 +12,11 @@
 /* Home */
 
 .rounded-gradient {
-    background: linear-gradient(126deg, rgba(22,15,152,1) 14%, rgba(58,49,221,1) 46%, rgba(94,155,244,1) 71%);
+    background: var(--primary-color);
     border-radius: 0% 0% 22% 22% / 0% 0% 24% 24%;
     width: 100%;
     padding: 100px 40px 40px 40px ;
-    color: white; /* Aggiunto per migliorare la leggibilità del testo */
+    color: var(--color-white); /* Aggiunto per migliorare la leggibilità del testo */
 }
 
 .align-items-center {
@@ -27,8 +27,8 @@
 
 
 .logoSfondo {
-    max-width: 100%;
-    height: auto;
+  max-width: 80%;
+  height: auto;
 }
 
 

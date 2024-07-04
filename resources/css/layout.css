@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,6 +7,10 @@
 :root {
     --primary-color: #3586ff;
     --color-login: #333;
-    --color-white: #ffffff;
+    --color-white: #E8F5FF;
     --color-black: #000000;
+}
+
+body{
+    background-color: var(--color-white);
 }
