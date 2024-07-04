@@ -48,7 +48,7 @@
         </div>
         <div class="col-lg-4 col-12 mb-4 mb-md-0">
           <h5>{{__('ui.call_revisor')}}</h5>
-          <p>{{__('ui.desc_evisor')}}</p>
+          <p>{{__('ui.desc_revisor')}}</p>
           <a href="{{ route('become.revisor') }}" class="btn btnCustom">{{__('ui.btn_revisor')}}</a>
         </div>
       </div>

@@ -25,7 +25,7 @@
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
-                                    href="{{ route('byCategory', ['category' => $category->id]) }}">{{ $category->name }}</a>
+                                    href="{{ route('byCategory', ['category' => $category->id]) }}">{{ __('categories.'. $category->name) }}</a>
                                 @if (!$loop->last)
                                     <hr class="dropdown-divider">
                                 @endif

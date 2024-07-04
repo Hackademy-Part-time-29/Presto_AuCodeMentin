@@ -1,6 +1,6 @@
 <?php
 return [
-    'placeholder'=>'Search',
+    'placeholder'=>'Search...',
     'head'=>'Search results',
     'not_article'=>'No articles matching your search',
     'btn_add'=>'Publish an article',
