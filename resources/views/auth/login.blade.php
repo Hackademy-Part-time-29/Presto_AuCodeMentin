@@ -27,7 +27,7 @@
                     <input class="login-button" type="submit" value="{{__('authForm.sign_in')}}">
                 </form>
                 {{-- Inizio form registrazione --}}
-                <div class="heading">{{__('authForm.register')}}</div>
+                {{-- <div class="heading">{{__('authForm.register')}}</div>
                 <form method="POST" action="/register" class="form">
                     @csrf
                     <input class="input" name="name" type="text" class="form-control" placeholder="Nome">

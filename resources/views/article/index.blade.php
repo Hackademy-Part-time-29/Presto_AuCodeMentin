@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid">
+    <div class="container heightCustom">
         <!-- Titolo -->
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">

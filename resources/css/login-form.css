@@ -186,3 +186,8 @@
   font-size: 1.1rem;
   color: #333;
 }
+
+.input__field .input__custom::placeholder{
+  color: #aaa;
+  font-weight: 500;
+}
