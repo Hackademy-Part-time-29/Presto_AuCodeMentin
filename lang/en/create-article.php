@@ -8,5 +8,4 @@ return [
     'select_file'=>'',
     'not_selected_file'=>'',
     'btn_create'=>'',
-
 ];
