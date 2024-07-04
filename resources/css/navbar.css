@@ -6,9 +6,7 @@
 
 .navbar{
     /* From https://css.glass */
-    background: rgba(94,155,244,0.4);
-    border-radius: 0% 0% 22% 22% / 0% 0% 24% 24%;
-    border-radius: 16px;
+    background: var(--primary-color);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.3px);
     -webkit-backdrop-filter: blur(5.3px);
