@@ -93,11 +93,11 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Accedi</a>
+                        <a class="nav-link" href="/login">Accedi/Registrati</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="/register">Registrati</a>
-                    </li>
+                    </li> --}}
                 @endauth
             </ul>
         </div>

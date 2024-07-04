@@ -1,23 +1,4 @@
-/* .content {
-  min-height: calc(100vh - 100px);
-}
-
-.footer {
-  height: 100px;
-} */
-
-/* Footer nuovo */
-
-:root{
-  --primary-color: #3586ff;
-}
-
-
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Footer*/
 
 footer{
   position: relative;
@@ -25,6 +6,8 @@ footer{
   background: var(--primary-color);
   padding: 20px 50px;
 }
+
+/* Wave img*/
 
 footer .wave{
   position: absolute;
@@ -64,6 +47,7 @@ footer .wave#wave4{
   animation: animateWave_02 3s linear infinite;
 }
 
+/* Animation wave */
 
 @keyframes animateWave{
   0%{
