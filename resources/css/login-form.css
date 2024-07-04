@@ -148,6 +148,7 @@
   right: 48%;
   transform: translateY(-50%);
   z-index: 6;
+  transition: 1.8s ease-in-out;
 }
 
 .forms__container{
@@ -166,6 +167,8 @@
   width: 50%;
   display: grid;
   grid-template-columns: 1fr;
+  z-index: 5;
+  transition: 1s .7s ease-in-out;
 }
 
 form{
@@ -187,7 +190,6 @@ form.signup__form{
   z-index: 1;
   opacity: 0;
 } 
-
 
 .title__form{
   text-align: center;
@@ -270,17 +272,19 @@ form .input__field i{
   z-index: 7;
 }
 
-
 .left__panel{
+  pointer-events: all;
   padding: 3rem 17% 2rem 12%;
 }
 
 .right__panel{
+  pointer-events: none;
   padding: 3rem 12% 2rem 17%;
 }
 
 .panel .content{
   color: #fff;
+  transition: .9s .6s ease-in-out;
 }
 
 .panel h3{
@@ -296,8 +300,39 @@ form .input__field i{
 
 .img__auth{
   width: 100%;
+  transition: .9s .6s ease-in-out;
 }
 
 .right__panel .content, .right__panel .img__auth{
   transform: translateX(800px);
+}
+
+/* Animation */
+
+.container__login.sign-up-mode:before{
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.container__login.sign-up-mode .left__panel .img__auth,
+.container__login.sign-up-mode .left__panel .content
+{
+  transform: translateX(-800px);
+}
+
+.container__login.sign-up-mode .right__panel .content,
+.container__login.sign-up-mode .right__panel .img__auth{
+  transform: translateX(0px);
+}
+
+.container__login.sign-up-mode .left-panel{
+  pointer-events: none;
+}
+
+.container__login.sign-up-mode .rights-panel{
+  pointer-events: all;
+}
+
+.container__login.sign-up-mode .signin__signup{
+  left: 25%;
 }
