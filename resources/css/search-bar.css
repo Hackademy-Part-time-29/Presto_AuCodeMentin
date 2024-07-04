@@ -8,7 +8,6 @@
     background: #fff;
     border-radius: 30px;
     align-items: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .box:hover .input-search{
@@ -26,4 +25,10 @@
 
 .box button .bi{
     font-size: 18px;
+}
+
+.box .btn-c{
+    border: none;
+    background: none;
+    outline: none;
 }

@@ -35,7 +35,7 @@
                 </li>
 
             </ul>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav d-flex align-items-center">
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li> --}}
