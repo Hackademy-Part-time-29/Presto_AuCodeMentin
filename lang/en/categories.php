@@ -1,6 +1,6 @@
 <?php
 return [
-    'head'=>'',
-    'not_article'=>'',
-    'btn_add'=>'',
+    'head'=>'Articles from category',
+    'not_article'=>"No articles have been created for this category yet.",
+    'btn_add'=>'Create Article',
 ];

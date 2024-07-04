@@ -1,7 +1,7 @@
 <?php
 return [
-    'placeholder'=>'',
-    'head'=>'',
-    'not_article'=>'',
-    'btn_add'=>'',
+    'placeholder'=>'Search',
+    'head'=>'Search results',
+    'not_article'=>'No articles matching your search',
+    'btn_add'=>'Publish an article',
 ];
