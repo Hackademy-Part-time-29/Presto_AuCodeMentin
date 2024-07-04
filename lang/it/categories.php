@@ -1,6 +1,6 @@
 <?php
 return [
-    'head'=>'',
-    'not_article'=>'',
-    'btn_add'=>'',
+    'head'=>'Articoli della categoria',
+    'not_article'=>'Non sono ancora stati creati articoli per questa categoria',
+    'btn_add'=>'Inserisci annuncio',
 ];

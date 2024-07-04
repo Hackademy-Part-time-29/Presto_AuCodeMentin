@@ -13,12 +13,12 @@
                     <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.index') }}">Articoli</a>
+                    <a class="nav-link" href="{{ route('article.index') }}">{{__('ui.article')}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Categorie
+                        {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu">
 
@@ -93,10 +93,10 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Accedi</a>
+                        <a class="nav-link" href="/login">{{__('ui.login')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/register">Registrati</a>
+                        <a class="nav-link" href="/register">{{__('ui.signup')}}</a>
                     </li>
                 @endauth
             </ul>

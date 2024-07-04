@@ -2,8 +2,8 @@
 return [
     //Homepage
     'welcome' => 'Benvenuto su',
-    'desc_welcome'=>'',
-    'new_articles'=>'',
-    'all_articles' => '',
-    'add_article'=> '',
+    'desc_welcome'=>'Inserisci un annuncio per vendere ciò che speri possa regalare le stesse emozioni che hai avuto tu!',
+    'new_articles'=>'Articoli più recenti',
+    'all_articles' => 'Tutti gli articoli',
+    'add_article'=> 'Inserisci un annuncio',
 ];

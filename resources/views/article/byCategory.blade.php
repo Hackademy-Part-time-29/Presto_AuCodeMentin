@@ -3,7 +3,7 @@
         <!-- Titolo della categoria -->
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
-                <h1 class="display-2">Articoli della categoria <span
+                <h1 class="display-2">{{__('categories.head')}}<span
                         class="fst-italic fw-bold">{{ $category->name }}</span></h1>
             </div>
         </div>
@@ -16,9 +16,9 @@
                 </div>
             @empty
                 <div class="col-12 text-center">
-                    <h3>Non sono ancora stati creati articoli per questa categoria!</h3>
+                    <h3>{{__('categories.not_article')}}</h3>
                     @auth
-                        <a class="btn btn-custom my-5" href="{{ route('article.create') }}">Pubblica un articolo</a>
+                        <a class="btn btn-custom my-5" href="{{ route('article.create') }}">{{__('categories.btn_add')}}</a>
                     @endauth
                 </div>
             @endforelse

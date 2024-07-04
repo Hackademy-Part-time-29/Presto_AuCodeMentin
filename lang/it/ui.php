@@ -1,16 +1,17 @@
 <?php
 return [
     // Navbar
-    'article' =>'',
-    'categories' => '',
-    'login' => '',
-    'signup' => '',
+    'article' =>'Articoli',
+    'categories' => 'Categorie',
+    'login' => 'Accedi',
+    'signup' => 'Registrati',
     // Footer
-    'contacts' => '',
-    'phone' => '',
-    'call_revisor' => '',
-    'desc_evisor' => '',
-    'btn_revisor' => '',
-    'price' => '',
-    'description' => '',
+    'contacts'=>'Contatti',
+    'info' => 'Email: info@codecommerce.com',
+    'phone' => 'Telefono: 123-456-7890',
+    'call_revisor' => 'Vuoi diventare revisore?',
+    'desc_revisor' => 'Cliccando il bottone sottostante farai richiesta al nostro admin',
+    'btn_revisor' => 'Diventa revisore',
+    'price' => 'Prezzo',
+    'description' => 'Descrizione',
 ];
