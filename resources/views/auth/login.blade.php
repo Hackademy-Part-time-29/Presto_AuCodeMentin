@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="d-flex justify-content-center card-container">
+    {{-- <div class="d-flex justify-content-center card-container">
         {{-- Inizio form login --}}
-        <div class="login row ">
+    {{-- <div class="login row ">
             <div class="col-12">
                 <div class="heading">{{__('authForm.login')}}</div>
                 <form method="POST" action="/login" class="form">
@@ -54,8 +54,8 @@
                     <span class="forgot-password">
                         <a href="{{ route('login') }}">{{__('authForm.register_msg')}}</a>
                     </span>
-                </form>
-                {{-- <div class="social-account-container">
+                </form> --}}
+    {{-- <div class="social-account-container">
                     <span class="title">Or Sign in with</span>
                     <div class="social-accounts">
                         <button class="social-button google">
@@ -82,10 +82,32 @@
                     </div>
                 </div> --}}
 
+    {{-- </div> --}}
+    {{-- </div> Fine form login --}}
+    {{-- Inizio form registrazione --}}
+
+    {{-- </div> --}}
+
+
+    <div class="container__login container">
+        <div class="forms__container row">
+            <div class="signin-signup">
+                <form action="" class="signin__form">
+                    <h2 class="title__form">Accedi</h2>
+                    <div class="input__field">
+                        <i class="bi bi-person-fill text-center"></i>
+                        <input class="input__custom"type="text" placeholder="Username">
+                    </div>
+                    <div class="input__field">
+                        <i class="bi bi-lock-fill text-center"></i>
+                        <input class="input__custom" type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="Login" class="btn btnCustom">
+
+                    <p class="social__text">Entra con un social network</p>
+                </form>
             </div>
-        </div> {{--Fine form login--}}
-        {{-- Inizio form registrazione --}}
-        
+        </div>
     </div>
 
 </x-layout>
