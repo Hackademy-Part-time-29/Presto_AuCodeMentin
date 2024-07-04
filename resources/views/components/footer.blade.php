@@ -37,19 +37,19 @@
       <div class="row">
         <div class="col-lg-4 col-12 mb-4 mb-md-0 ">
           <h5 class="text-uppercase">{{ env('APP_NAME') }}</h5>
-          <p>Il tuo negozio online di fiducia.</p>
+          <p>{{__('ui.descContacts')}}</p>
         </div>
         <div class="col-lg-4 col-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Contatti</h5>
+          <h5 class="text-uppercase">{{__('ui.contacts')}}</h5>
           <ul class="list-unstyled mb-0">
-            <li><a href="#!" class="text-light">Email: info@codecommerce.com</a></li>
-            <li><a href="#!" class="text-light">Telefono: 123-456-7890</a></li>
+            <li><a href="#!" class="text-light">{{__('ui.info')}}</a></li>
+            <li><a href="#!" class="text-light">{{__('ui.phone')}}</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-12 mb-4 mb-md-0">
-          <h5>Vuoi diventare revisore?</h5>
-          <p>Cliccando il bottone sottostante farai richiesta al nostro admin</p>
-          <a href="{{ route('become.revisor') }}" class="btn btnCustom">Diventa revisore</a>
+          <h5>{{__('ui.call_revisor')}}</h5>
+          <p>{{__('ui.desc_evisor')}}</p>
+          <a href="{{ route('become.revisor') }}" class="btn btnCustom">{{__('ui.btn_revisor')}}</a>
         </div>
       </div>
   </div>

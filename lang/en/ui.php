@@ -7,6 +7,7 @@ return [
     'signup' => '',
     // Footer
     'contacts'=>'',
+    'descContats'=>'',
     'info' => '',
     'phone' => '',
     'call_revisor' => '',

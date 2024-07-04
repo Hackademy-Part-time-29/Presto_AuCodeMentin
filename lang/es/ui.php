@@ -7,6 +7,7 @@ return [
     'signup' => 'Registrate',
     // Footer
     'contacts'=>'Contactos',
+    'descContacts'=>'Tu tienda online de confianza.',
     'info' => 'Correo electrónico: info@codecommerce.com',
     'phone' => 'Teléfono : 123-456-7890',
     'call_revisor' => '¿Quieres volver a ser revisor?',
