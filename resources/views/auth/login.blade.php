@@ -27,7 +27,7 @@
                     <input class="login-button" type="submit" value="{{__('authForm.sign_in')}}">
                 </form>
                 {{-- Inizio form registrazione --}}
-                {{-- <div class="heading">{{__('authForm.register')}}</div>
+    {{-- <div class="heading">{{__('authForm.register')}}</div>
                 <form method="POST" action="/register" class="form">
                     @csrf
                     <input class="input" name="name" type="text" class="form-control" placeholder="Nome">
@@ -89,22 +89,59 @@
     {{-- </div> --}}
 
 
-    <div class="container__login container">
+    <div class="container__login container heightCustom">
         <div class="forms__container row">
             <div class="signin-signup">
                 <form action="" class="signin__form">
                     <h2 class="title__form">Accedi</h2>
                     <div class="input__field">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="input__custom"type="text" placeholder="Username">
+                        <input class="input__custom" type="text" placeholder="Username">
                     </div>
                     <div class="input__field">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="input__custom" type="password" placeholder="Password">
                     </div>
-                    <input type="submit" value="Login" class="btn btnCustom">
+                    <input type="submit" value="Login" class="btn btnCustom mt-2 mb-2">
 
                     <p class="social__text">Entra con un social network</p>
+                    <div class="social__media justify-content-center row">
+                        <div class="social__icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-github"></i>
+                        </div>
+                        <div class="social__icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-facebook"></i>
+                        </div>
+                        <div class="social__icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="" class="signin__form">
+                    <h2 class="title__form">Accedi</h2>
+                    <div class="input__field">
+                        <i class="bi bi-person-fill text-center"></i>
+                        <input class="input__custom" type="text" placeholder="Username">
+                    </div>
+                    <div class="input__field">
+                        <i class="bi bi-lock-fill text-center"></i>
+                        <input class="input__custom" type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="Login" class="btn btnCustom mt-2 mb-2">
+
+                    <p class="social__text">Entra con un social network</p>
+                    <div class="social__media justify-content-center row">
+                        <div class="social__icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-github"></i>
+                        </div>
+                        <div class="social__icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-facebook"></i>
+                        </div>
+                        <div class="social__icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

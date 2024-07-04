@@ -137,13 +137,13 @@
   overflow: hidden;
 }
 
-.forms__container{
+/* .forms__container{
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-}
+} */
 
 .signin__form{
   display: flex;
@@ -156,7 +156,7 @@
   text-align: center;
   font-weight: 900;
   font-size: 30px;
-  color: rgb(16, 137, 211);
+  color: var(--primary-color);
 }
 
 .signin__form .input__field{
@@ -184,10 +184,30 @@
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #333;
+  color: var(--color-login);
 }
 
 .input__field .input__custom::placeholder{
   color: #aaa;
   font-weight: 500;
+}
+
+.social__text{
+  padding: .7rem 0;
+  font-size: 1rem;
+}
+
+.social__icon{
+  height: 46px;
+  width: 46px;
+  border: 1px solid var(--color-login);
+  margin: 0 .45rem;
+  color: var(--color-login);
+  font-size: 1.1rem;
+  border-radius: 50%;
+}
+
+.social__icon:hover{
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
