@@ -26,7 +26,7 @@
 </footer> --}}
 
 
-<footer class="text-center">
+<footer class="text-center mt-5">
     <div class="waves">
         <div class="wave" id="wave1"></div>
         <div class="wave" id="wave2"></div>
