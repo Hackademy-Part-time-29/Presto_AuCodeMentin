@@ -60,7 +60,7 @@
                     @csrf
                     @method('PATCH')
 
-                    <button class="btn btn-danger py-2 px-5 fw-bold">{{__('revisor.btn_accept')}}</button>
+                    <button class="btn btn-danger py-2 px-5 fw-bold">{{__('revisor.btn_delete')}}</button>
                 </form>
 
                 <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
