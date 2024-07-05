@@ -1,9 +1,9 @@
 <x-layout>
     <div class="d-flex justify-content-center card-container">
         {{-- Inizio form login --}}
-    <div class="login row ">
+        <div class="login row ">
             <div class="col-12">
-                <div class="heading">{{__('authForm.login')}}</div>
+                <div class="heading">{{ __('authForm.login') }}</div>
                 <form method="POST" action="/login" class="form">
                     @csrf
                     <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
@@ -19,80 +19,25 @@
                         </p>
                     @enderror
                     <span class="forgot-password">
-                        <a href="{{ route('password.request') }}">{{__('authForm.forgotten_pass')}}</a>
+                        <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
                     </span>
                     <span class="forgot-password">
-                        <a href="{{ route('register') }}">{{__('authForm.register_msg')}}</a>
+                        <a href="{{ route('register') }}">{{ __('authForm.register_msg') }}</a>
                     </span>
-                    <input class="login-button" type="submit" value="{{__('authForm.sign_in')}}">
+                    <input class="login-button" type="submit" value="{{ __('authForm.sign_in') }}">
                 </form>
-                {{-- Inizio form registrazione --}}
-    {{-- <div class="heading">{{__('authForm.register')}}</div>
-                <form method="POST" action="/register" class="form">
-                    @csrf
-                    <input class="input" name="name" type="text" class="form-control" placeholder="Nome">
-                    @error('name')
-                        <p class="fst-italic text-danger">
-                            {{ $message }}
-                        </p>
-                    @enderror
-                    <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
-                    @error('email')
-                        <p class="fst-italic text-danger">
-                            {{ $message }}
-                        </p>
-                    @enderror
-                    <input class="input" name="password" type="password" class="form-control" placeholder="Password">
-                    @error('password')
-                        <p class="fst-italic text-danger">
-                            {{ $message }}
-                        </p>
-                    @enderror
-                    <input class="input" name="password_confirmation" type="password" class="form-control"
-                        placeholder="Ripeti password">
-                    <input class="login-button" type="submit" value="Registrati">
-                    <span class="forgot-password">
-                        <a href="{{ route('login') }}">{{__('authForm.register_msg')}}</a>
-                    </span>
-                </form> --}}
-    {{-- <div class="social-account-container">
-                    <span class="title">Or Sign in with</span>
-                    <div class="social-accounts">
-                        <button class="social-button google">
-                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 488 512">
-                                <path
-                                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
-                                </path>
-                            </svg>
-                        </button>
-                        <button class="social-button apple">
-                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
-                                <path
-                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z">
-                                </path>
-                            </svg>
-                        </button>
-                        <button class="social-button twitter">
-                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                <path
-                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                </div> --}}
-
-    {{-- </div>
-    </div> {{--Fine form login --}}
-    {{-- Inizio form registrazione--}}
-
+            </div>
+        </div>
     </div>
 
 
+    {{-- Form js figo --}}
+
     {{-- <div class="container__login heightCustom">
         <div class="forms__container row">
-            <div class="signin__signup">
-                <form action="" class="signin__form">
+            <div class="signin__signup"> --}}
+    <!-- form login -->
+    {{-- <form action="" class="signin__form">
                     <h2 class="title__form">Accedi</h2>
                     <div class="input__field">
                         <i class="bi bi-person-fill text-center"></i>
@@ -103,7 +48,6 @@
                         <input class="input__custom" type="password" placeholder="Password">
                     </div>
                     <input type="submit" value="Accedi" class="btn btnCustom mt-2 mb-2">
-
                     <p class="social__text">Entra con un social network</p>
                     <div class="social__media justify-content-center row">
                         <div class="social__icon d-flex justify-content-center align-items-center">
@@ -117,8 +61,9 @@
                         </div>
                     </div>
                 </form>
-
-                <form action="" class="signup__form">
+     --}}
+    <!-- form register -->
+    {{-- <form action="" class="signup__form">
                     <h2 class="title__form">Registrati</h2>
                     <div class="input__field">
                         <i class="bi bi-person-fill text-center"></i>
@@ -133,7 +78,6 @@
                         <input class="input__custom" type="password" placeholder="Password">
                     </div>
                     <input type="submit" value="Registrati" class="btn btnCustom mt-2 mb-2">
-
                     <p class="social__text">Registrati con un social network</p>
                     <div class="social__media justify-content-center row">
                         <div class="social__icon d-flex justify-content-center align-items-center">
@@ -148,31 +92,26 @@
                     </div>
                 </form>
             </div>
-            <div class="panels__container">
-                <div class="panel__custom left__panel">
-                    <div class="content">
-                        <h3>Sei nuovo?</h3>
-                        <p>Registrati per inserire nuovi annunci?</p>
-                        <button class="btn btnCustom " id="sign-in-btn"></button>
-                    </div>
-
-                    <img src="{{ asset('img/login.svg') }}" class="img__auth" alt="">
-                </div>
-            </div>
-
-            <div class="panels__container">
-                <div class="panel__custom right__panel">
-                    <div class="content">
-                        <h3>Sei già registrato??</h3>
-                        <p>Accedi per inserire nuovi annunci?</p>
-                        <button class="btn btnCustom" id="sign-up-btn"></button>
-                    </div>
-
-                    <img src="{{ asset('img/register.svg') }}" class="img__auth" alt="">
-                </div>
-            </div>
-
         </div>
-    </div> --}}
+        <div class="panels__container">
+            <div class="panel__custom left__panel">
+                <div class="content">
+                    <h3>Sei nuovo?</h3>
+                    <p>Registrati per inserire nuovi annunci?</p>
+                    <button class="btn btnCustom" id="sign-up-btn">Registrati</button>
+                </div>
+                <img src="{{ asset('img/login.svg') }}" class="img__auth" alt="">
+            </div>
+            <div class="panel__custom right__panel">
+                <div class="content">
+                    <h3>Sei già registrato?</h3>
+                    <p>Accedi per inserire nuovi annunci?</p>
+                    <button class="btn btnCustom" id="sign-in-btn">Accedi</button>
+                </div>
+                <img src="{{ asset('img/register.svg') }}" class="img__auth" alt="">
+            </div>
+        </div>
+    </div>
+     --}}
 
 </x-layout>
