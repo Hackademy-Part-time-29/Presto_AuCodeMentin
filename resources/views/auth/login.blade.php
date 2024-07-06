@@ -63,15 +63,15 @@
                 <form action="#" class="sign-up-form" id="loginRegisterForm">
                     <h2 class="title">Registrati</h2>
                     <div class="input-field">
-                        <i class="fas fa-user"></i>
+                        <i class="bi bi-person-fill text-center"></i>
                         <input class="inputCustom" type="text" placeholder="Username" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-envelope"></i>
+                        <i class="bi bi-envelope-fill text-center"></i>
                         <input class="inputCustom" type="email" placeholder="Email" />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-lock"></i>
+                        <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" type="password" placeholder="Password" />
                     </div>
                     <input type="submit" class="btn primary-button" value="Sign up" />
