@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container pt-5">
+    <div class="container pb-5 mb-5">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="display-4 pt-5">{{__('create-article.head')}}</h1>
