@@ -44,7 +44,7 @@
                         <input class="inputCustom" type="password" placeholder="Password" />
                     </div>
                     <input type="submit" value="Login" class="btn primary-button" />
-                    <p class="social-text">Or Sign in with social platforms</p>
+                    <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
                             <i class="bi bi-github"></i>

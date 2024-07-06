@@ -1,6 +1,7 @@
 <?php
 return [
     'login'=>'Login',
+    'login-social'=>'Log in through your social media',
     'forgotten_pass'=>'Password forgotten?',
     'register_msg'=>'If you are already registered, login!',
     'sign_in'=>'Sign In',
