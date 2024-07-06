@@ -40,13 +40,6 @@
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li> --}}
 
-                {{-- <form role="search" action="{{ route('article.search') }}" method="GET" class="d-flex"
-                    role="search">
-                    <button class="btn btn-outline-secondary" type="submit" id="basic-addon2">Search</button>
-                    <input class="form-control ms-2" type="search" name="query" placeholder="Search"
-                        aria-label="Search">
-                </form> --}}
-
                 <livewire:search />
 
                 <x-_locale lang="it" />
