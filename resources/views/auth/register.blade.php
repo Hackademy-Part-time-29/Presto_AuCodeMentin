@@ -1,4 +1,4 @@
-<x-layout>
+{{-- <x-layout>
     <div class="d-flex justify-content-center">
         <div class="login row ">
             <div class="col-12">
@@ -57,8 +57,8 @@
                     </div>
                 </div> --}}
 
-            </div>
+            {{-- </div>
         </div>
     </div>
 
-</x-layout>
+</x-layout> --}}

@@ -33,16 +33,27 @@
     <div class="containerCustom heightCustom">
         <div class="formsContainer">
             <div class="loginRegister">
-                <form action="#" class="sign-in-form" id="loginRegisterForm">
+                <form method="POST" action="/login" class="sign-in-form" id="loginRegisterForm">
+                    @csrf
                     <h2 class="title">Accedi</h2>
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" type="text" placeholder="Username" />
+                        <input class="inputCustom" name="email" type="email" placeholder="Username" />
                     </div>
+                    @error('email')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input class="inputCustom" type="password" placeholder="Password" />
+                        <input class="inputCustom" name="password" type="password" placeholder="Password" />
                     </div>
+                    @error('password')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <span class="forgot-password">
                         <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
                     </span>
@@ -60,19 +71,39 @@
                         </a>
                     </div>
                 </form>
-                <form action="#" class="sign-up-form" id="loginRegisterForm">
+                <form method="POST" action="/register" class="sign-up-form" id="loginRegisterForm">
+                    @csrf
                     <h2 class="title">Registrati</h2>
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" type="text" placeholder="Username" />
+                        <input class="inputCustom" name="name" type="text" placeholder="Username" />
                     </div>
+                    @error('name')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <div class="input-field">
                         <i class="bi bi-envelope-fill text-center"></i>
-                        <input class="inputCustom" type="email" placeholder="Email" />
+                        <input class="inputCustom" name="email" type="email" placeholder="Email" />
                     </div>
+                    @error('email')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input class="inputCustom" type="password" placeholder="Password" />
+                        <input class="inputCustom" name="password" type="password" placeholder="Password" />
+                    </div>
+                    @error('password')
+                        <p class="fst-italic text-danger">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    <div class="input-field">
+                        <i class="bi bi-lock-fill text-center"></i>
+                        <input class="inputCustom" name="password_confirmation" type="password" type="password" placeholder="Password" />
                     </div>
                     <input type="submit" class="btn primary-button" value="Sign up" />
                     <p class="social-text">Or Sign up with social platforms</p>
