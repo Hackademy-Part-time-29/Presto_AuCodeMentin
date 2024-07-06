@@ -43,7 +43,10 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" type="password" placeholder="Password" />
                     </div>
-                    <input type="submit" value="Login" class="btn primary-button" />
+                    <span class="forgot-password">
+                        <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
+                    </span>
+                    <input type="submit" value="Login" class="btn primary-button mt-2 mb-3" />
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -91,26 +94,24 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New here?</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                        ex ratione. Aliquid!
+                    <h3>Non sei registrato?</h3>
+                    <p class="text-center">
+                        Se non sei registrato, fallo subito!
                     </p>
                     <button class="btn btnCustomLogin secondary-button" id="sign-up-btn">
-                        Sign up
+                        Registrati
                     </button>
                 </div>
                 <img src="{{ asset('img/login.svg') }}" class="image" alt="" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>One of us ?</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        laboriosam ad deleniti.
+                    <h3>Hai già un'account?</h3>
+                    <p class="text-center">
+                        Effettua l'accesso, vendi e compra ciò che vuoi!
                     </p>
                     <button class="btn btnCustomLogin secondary-button" id="sign-in-btn">
-                        Sign in
+                        Accedi
                     </button>
                 </div>
                 <img src="{{ asset('img/register.svg') }}" class="image" alt="" />
