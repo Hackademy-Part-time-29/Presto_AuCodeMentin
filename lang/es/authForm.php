@@ -1,9 +1,11 @@
 <?php
 return [
     'login'=>'Accede',
-    'login-social'=>'',
-    'new-user'=>'',
-    'desc-NewUser'=>'',
+    'login-social'=>'O regístrate con las plataformas sociales',
+    'new-user'=>'¿Eres nuevo?',
+    'old-user'=>'Do you already have an account?',
+    'access'=>"Inicia sesión, vende y compra lo que quieras!",
+    'desc-NewUser'=>'Bienvenido, si eres un nuevo usuario regístrate haciendo clic en el botón de abajo.',
     'forgotten_pass'=>'Contraseña olvidada?',
     'register_msg'=>'Si ya estás registrado ¡Accede!',
     'sign_in'=>'Entrar',
