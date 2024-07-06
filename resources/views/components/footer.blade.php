@@ -49,7 +49,7 @@
             <div class="col-lg-4 col-12 mb-4 mb-md-0">
                 <h5>{{ __('ui.call_revisor') }}</h5>
                 <p>{{ __('ui.desc_revisor') }}</p>
-                <a href="{{ route('become.revisor') }}" class="btn btnCustomWhite">{{ __('ui.btn_revisor') }}</a>
+                <a href="{{ route('become.revisor') }}" class="btn secondary-button">{{ __('ui.btn_revisor') }}</a>
             </div>
         </div>
         <div class="text-center p-3 text-white">

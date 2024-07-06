@@ -18,7 +18,7 @@
                 <div class="col-12 text-center">
                     <h3>{{__('categories.not_article')}}</h3>
                     @auth
-                        <a class="btn btn-custom my-5" href="{{ route('article.create') }}">{{__('categories.btn_add')}}</a>
+                        <a class="btn  primary-button my-5" href="{{ route('article.create') }}">{{__('categories.btn_add')}}</a>
                     @endauth
                 </div>
             @endforelse
