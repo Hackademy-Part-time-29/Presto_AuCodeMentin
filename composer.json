@@ -9,6 +9,7 @@
         "laravel/fortify": "^1.21",
         "laravel/framework": "^11.9",
         "laravel/scout": "^10.10",
+        "laravel/socialite": "^5.15",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5",
         "outhebox/blade-flags": "^1.5",
