@@ -34,7 +34,7 @@
         <div class="formsContainer">
             <div class="loginRegister">
                 <form action="#" class="sign-in-form" id="loginRegisterForm">
-                    <h2 class="title">Accedi</h2>
+                    <h2 class="title">{{__('authForm.login')}}</h2>
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
                         <input class="inputCustom" type="text" placeholder="Username" />
@@ -43,7 +43,7 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" type="password" placeholder="Password" />
                     </div>
-                    <input type="submit" value="Login" class="btn primary-button" />
+                    <input type="submit" value="{{__('authForm.login')}}" class="btn primary-button" />
                     <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -58,7 +58,7 @@
                     </div>
                 </form>
                 <form action="#" class="sign-up-form" id="loginRegisterForm">
-                    <h2 class="title">Registrati</h2>
+                    <h2 class="title">{{__('authForm.register')}}</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input class="inputCustom" type="text" placeholder="Username" />
@@ -71,7 +71,7 @@
                         <i class="fas fa-lock"></i>
                         <input class="inputCustom" type="password" placeholder="Password" />
                     </div>
-                    <input type="submit" class="btn primary-button" value="Sign up" />
+                    <input type="submit" class="btn primary-button" value="{{__('authForm.register')}}" />
                     <p class="social-text">Or Sign up with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -91,10 +91,9 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New here?</h3>
+                    <h3>{{__('authForm.new-user')}}</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                        ex ratione. Aliquid!
+                        {{__('authForm.desc-NewUser')}}
                     </p>
                     <button class="btn btnCustomLogin secondary-button" id="sign-up-btn">
                         Sign up

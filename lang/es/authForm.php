@@ -1,7 +1,9 @@
 <?php
 return [
     'login'=>'Accede',
-    'login-social'=>'Accede a través de tus redes sociales',
+    'login-social'=>'',
+    'new-user'=>'',
+    'desc-NewUser'=>'',
     'forgotten_pass'=>'Contraseña olvidada?',
     'register_msg'=>'Si ya estás registrado ¡Accede!',
     'sign_in'=>'Entrar',
