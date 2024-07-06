@@ -156,7 +156,7 @@
   z-index: 5;
 }
 
-form {
+#loginRegisterForm{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,7 +447,7 @@ form.sign-in-form {
     padding: 0.5rem 0;
   }
 
-  .btn.secondary-button {
+  .secondary-button {
     width: 110px;
     height: 35px;
     font-size: 0.7rem;

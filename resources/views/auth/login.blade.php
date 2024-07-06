@@ -33,7 +33,7 @@
     <div class="containerCustom heightCustom">
         <div class="formsContainer">
             <div class="loginRegister">
-                <form action="#" class="sign-in-form">
+                <form action="#" class="sign-in-form" id="loginRegisterForm">
                     <h2 class="title">Accedi</h2>
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
@@ -57,8 +57,8 @@
                         </a>
                     </div>
                 </form>
-                <form action="#" class="sign-up-form">
-                    <h2 class="title">Sign up</h2>
+                <form action="#" class="sign-up-form" id="loginRegisterForm">
+                    <h2 class="title">Registrati</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input class="inputCustom" type="text" placeholder="Username" />
