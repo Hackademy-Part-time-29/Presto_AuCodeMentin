@@ -68,8 +68,9 @@
                                         href="{{ route('revisor.index') }}">Zona revisore
                                     </a>
                                 </li>
+                                <li class="dropdown-divider"></li>
                             @endif
-                            <li><hr class="dropdown-divider"></li>
+                            
                             {{-- <li><a class="dropdown-item" href="#">Impostazioni</a></li>
                             <li><a class="dropdown-item" href="#">Gestione account</a></li> --}}
                             {{-- <li><hr class="dropdown-divider"></li> --}}

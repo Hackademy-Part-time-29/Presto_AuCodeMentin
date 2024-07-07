@@ -29,8 +29,8 @@
                     <span class="forgot-password">
                         <a href="{{ route('login') }}">{{__('authForm.register_msg')}}</a>
                     </span>
-                </form>
-                {{-- <div class="social-account-container">
+                </form> --}}
+               {{-- <div class="social-account-container">
                     <span class="title">Or Sign in with</span>
                     <div class="social-accounts">
                         <button class="social-button google">
@@ -56,8 +56,8 @@
                         </button>
                     </div>
                 </div> --}}
-
-            {{-- </div>
+{{-- 
+            </div>
         </div>
     </div>
 
