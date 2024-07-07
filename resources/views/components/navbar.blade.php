@@ -99,9 +99,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/login">{{__('ui.login')}}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">{{__('ui.signup')}}</a>
-                    </li>
+
                 @endauth
             </ul>
         </div>
