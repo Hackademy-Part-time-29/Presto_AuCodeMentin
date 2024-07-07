@@ -1,7 +1,7 @@
 <x-layout>
     <div class="containerCustom heightCustom">
         <div class="formsContainer">
-            <div class="loginRegister">
+            <div class="forgotPassword">
                 <form method="POST" action="{{ route('password.email') }}" id="loginRegisterForm">
                     @csrf
                     <h2 class="title">Recupera password</h2>

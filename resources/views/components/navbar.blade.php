@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('home') }}">
+        <a class="navbar-brand text-white" href="{{ route('home') }}">
             <img src="{{ asset('img/Logo-navbar-bianco.png') }}" alt="CodeCommerce Logo" class="logo">
             {{ env('APP_NAME') }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.index') }}">{{__('ui.article')}}</a>
+                    <a class="nav-link text-white" href="{{ route('article.index') }}">{{__('ui.article')}}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{__('ui.categories')}}
                     </a>
@@ -36,7 +36,7 @@
 
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item"><livewire:search /></li>
+                <li class="nav-item text-white"><livewire:search /></li>
             </ul>
             
             <ul class="navbar-nav">
@@ -52,7 +52,7 @@
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
+                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
                                 class="bi bi-person"></i> {{ auth()->user()->name ?? 'Utente' }}</a>
                                 
                             @if (Auth::user()->is_revisor)
@@ -63,7 +63,7 @@
                             @endif
                         <ul class="dropdown-menu dropdown-menu-end">
                             @if (Auth::user()->is_revisor)
-                                <li class="nav-item">
+                                <li class="nav-item text-white">
                                     <a class="dropdown-item"
                                         href="{{ route('revisor.index') }}">Zona revisore
                                     </a>
@@ -90,18 +90,15 @@
                         </ul>
                     </li>
                 @else
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="/login">Accedi/Registrati</a>
-                    </li> --}}
-                     {{-- <li class="nav-item">
-                        <a class="nav-link" href="/register">Registrati</a>
-                    </li> --}}
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="/login">Accedi/Registrati</a>
+                    </li>
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="/login">{{__('ui.login')}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/register">{{__('ui.signup')}}</a>
-                    </li>
+                    </li> --}}
                 @endauth
             </ul>
         </div>
