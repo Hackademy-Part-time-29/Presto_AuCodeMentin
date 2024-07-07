@@ -33,6 +33,8 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item"><livewire:search /></li>
+
 
             </ul>
             <ul class="navbar-nav">
@@ -98,7 +100,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/register">{{__('ui.signup')}}</a>
-                    </li> --}}
+                    </li>
                 @endauth
             </ul>
         </div>
