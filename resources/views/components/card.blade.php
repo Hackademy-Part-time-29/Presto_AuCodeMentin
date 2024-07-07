@@ -6,8 +6,8 @@
             <div class="card__data">
                 <h5 class="cardTitle">{{ $article->title }}</h5>
                 <h6 class="price">{{$article->price}} €</h6>
-                <a href="{{route('article.show', compact('article'))}}" class="btn  primary-button">{{__('articles.btn_detail')}}</a>
-                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-outline-info ms-2">{{ __('categories.'.$article->category->name) }}</a>
+                <a href="{{route('article.show', compact('article'))}}" class="btn primary-button mb-2">{{__('articles.btn_detail')}}</a>
+                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn secondary-button">{{ __('categories.'.$article->category->name) }}</a>
             </div>
         </article>
     </div>

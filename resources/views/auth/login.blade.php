@@ -49,6 +49,9 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" name="password" type="password" placeholder="Password" />
                     </div>
+                    <span class="forgot-password">
+                        <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
+                    </span>
                     <input type="submit" value="Login" class="btn primary-button" />
                     <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">

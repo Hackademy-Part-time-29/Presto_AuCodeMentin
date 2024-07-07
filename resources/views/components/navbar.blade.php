@@ -27,7 +27,7 @@
                                 <a class="dropdown-item text-capitalize"
                                     href="{{ route('byCategory', ['category' => $category->id]) }}">{{ __('categories.'. $category->name) }}</a>
                                 @if (!$loop->last)
-                                    <hr class="dropdown-divider">
+                                    {{-- <hr class="dropdown-divider"> --}}
                                 @endif
                             </li>
                         @endforeach
@@ -35,12 +35,16 @@
                 </li>
 
             </ul>
-            <ul class="navbar-nav d-flex align-items-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><livewire:search /></li>
+            </ul>
+            
+            <ul class="navbar-nav">
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li> --}}
 
-                <livewire:search />
+                
 
                 <x-_locale lang="it" />
                 <x-_locale lang="en" />
