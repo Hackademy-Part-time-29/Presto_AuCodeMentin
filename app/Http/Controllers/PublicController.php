@@ -22,6 +22,10 @@ class PublicController extends Controller
         return view('article.searched', ['articles'=>$articles, 'query'=>$query]);
     }
 
+    public function thankYou(){
+        return view('reset-password');
+    }
+
     public function setLenguage($lang){
         session()->put('locale', $lang);
         return redirect()->back();
