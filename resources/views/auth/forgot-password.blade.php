@@ -4,12 +4,12 @@
             <div class="forgotPassword">
                 <form method="POST" action="{{ route('password.email') }}" id="loginRegisterForm">
                     @csrf
-                    <h2 class="title">Recupera password</h2>
+                    <h2 class="title">Password dimenticata?</h2>
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input name="email" type="email" class="inputCustom" placeholder="E-mail">
                     </div>
-                    <input class="primary-button" type="submit" value="Reimposta password">
+                    <button class="primary-button" type="submit">Reimposta password</button>
                 </form>
             </div>
         </div>

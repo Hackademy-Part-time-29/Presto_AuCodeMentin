@@ -1,21 +1,30 @@
 <x-layout>
-
     <div class="containerCustom heightCustom">
         <div class="formsContainer">
-            <div class="loginRegister">
-                <form method="POST" action="{{ route('password.email') }}" id="loginRegisterForm">
+            <div class="forgotPassword">
+                
+                <form method="POST" action="/reset-password" id="loginRegisterForm">
+                    <h2 class="title">Crea nuova password</h2>
                     @csrf
-                    <h2 class="title">Recupera password</h2>
+                    <input type="hidden" name="token" value="{{request()->route('token')}}">
+                    <div class="input-field">
+                        <i class="bi bi-person-fill text-center"></i>
+                        <input class="inputCustom" name="email" type="email" placeholder="Username">
+                    </div>
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input name="email" type="email" class="inputCustom" placeholder="E-mail">
+                        <input name="password" type="password" class="inputCustom" placeholder="Password">
                     </div>
-                    <input class="primary-button" type="submit" value="Reimposta password">
+                    <div class="input-field">
+                        <i class="bi bi-lock-fill text-center"></i>
+                        <input name="password_confirmation" type="password" class="inputCustom" placeholder="Ripeti password">
+                    </div>
+                    <button class="primary-button" type="submit">Reimposta password</button>
                 </form>
             </div>
         </div>
         <div class="panels-container">
-            <div class="panel right-panel">
+            <div class="panel left-panel">
                 <div class="content">
                     <h3>Hai dimenticato la password?</h3>
                     <p>
@@ -26,5 +35,4 @@
             </div>
         </div>
     </div>
-
 </x-layout>

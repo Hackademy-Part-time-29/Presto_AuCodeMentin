@@ -38,7 +38,7 @@
                     <h2 class="title">{{__('authForm.login')}}</h2>
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" name="email" type="email" placeholder="Username" />
+                        <input class="inputCustom" name="email" type="email" placeholder="Username">
                     </div>
                     @error('email')
                         <p class="fst-italic text-danger">
@@ -47,12 +47,13 @@
                     @enderror
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input class="inputCustom" name="password" type="password" placeholder="Password" />
+                        <input class="inputCustom" name="password" type="password" placeholder="Password">
                     </div>
                     <span class="forgot-password">
                         <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
                     </span>
-                    <input type="submit" value="Login" class="btn primary-button" />
+                    <button class="primary-button" type="submit">Login</button>
+
                     <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -71,7 +72,7 @@
                     <h2 class="title">{{__('authForm.register')}}</h2>
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" name="name" type="text" placeholder="Username" />
+                        <input class="inputCustom" name="name" type="text" placeholder="Username">
                     </div>
                     @error('name')
                         <p class="fst-italic text-danger">
@@ -80,7 +81,7 @@
                     @enderror
                     <div class="input-field">
                         <i class="bi bi-envelope-fill text-center"></i>
-                        <input class="inputCustom" name="email" type="email" placeholder="Email" />
+                        <input class="inputCustom" name="email" type="email" placeholder="Email">
                     </div>
                     @error('email')
                         <p class="fst-italic text-danger">
@@ -89,7 +90,7 @@
                     @enderror
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input class="inputCustom" name="password" type="password" placeholder="Password" />
+                        <input class="inputCustom" name="password" type="password" placeholder="Password">
                     </div>
                     @error('password')
                         <p class="fst-italic text-danger">
@@ -98,9 +99,11 @@
                     @enderror
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input class="inputCustom" name="password_confirmation" type="password" type="password" placeholder="Password" />
+                        <input class="inputCustom" name="password_confirmation" type="password" type="password" placeholder="Password">
                     </div>
-                    <input type="submit" class="btn primary-button" value="{{__('authForm.register')}}" />
+                    <button class="primary-button" type="submit">{{__('authForm.register')}}</button>
+
+                    
                     <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -128,7 +131,7 @@
                         {{__('authForm.register')}}
                     </button>
                 </div>
-                <img src="{{ asset('img/login.svg') }}" class="image" alt="" />
+                <img src="{{ asset('img/login.svg') }}" class="image" alt="">
             </div>
             <div class="panel right-panel">
                 <div class="content">
@@ -140,7 +143,7 @@
                         {{__('authForm.login')}}
                     </button>
                 </div>
-                <img src="{{ asset('img/register.svg') }}" class="image" alt="" />
+                <img src="{{ asset('img/register.svg') }}" class="image" alt="">
             </div>
         </div>
     </div>
