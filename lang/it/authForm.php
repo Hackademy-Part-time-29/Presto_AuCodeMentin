@@ -1,6 +1,7 @@
 <?php
 return [
     'login'=>'Accedi',
+    'singIn-singUp'=>'Accedi/Registrati',
     'login-social'=>'O registrati con le piattaforme social',
     'new-user'=>'Sei nuovo qui??',
     'old-user'=>'Hai già un account?',
