@@ -33,10 +33,11 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item"><livewire:search /></li>
+
 
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item"><livewire:search /></li>
             </ul>
             
             <ul class="navbar-nav">
