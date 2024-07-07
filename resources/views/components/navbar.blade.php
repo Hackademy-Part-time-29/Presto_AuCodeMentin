@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="{{ route('home') }}">
-            <img src="{{ asset('img/Logo-navbar-bianco.png') }}" alt="CodeCommerce Logo" class="logo">
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="{{ asset('img/logo.png') }}" alt="CodeCommerce Logo" class="logo">
             {{ env('APP_NAME') }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('article.index') }}">{{__('ui.article')}}</a>
+                    <a class="nav-link" href="{{ route('article.index') }}">{{__('ui.article')}}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{__('ui.categories')}}
                     </a>
@@ -27,26 +27,27 @@
                                 <a class="dropdown-item text-capitalize"
                                     href="{{ route('byCategory', ['category' => $category->id]) }}">{{ __('categories.'. $category->name) }}</a>
                                 @if (!$loop->last)
-                                    {{-- <hr class="dropdown-divider"> --}}
+                                    <hr class="dropdown-divider">
                                 @endif
                             </li>
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item"><livewire:search /></li>
-
 
             </ul>
-            {{-- <ul class="navbar-nav">
-                <li class="nav-item text-white"><livewire:search /></li>
-            </ul> --}}
-            
-            <ul class="navbar-nav">
+            <ul class="navbar-nav d-flex align-items-center">
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
                 </li> --}}
 
-                
+                {{-- <form role="search" action="{{ route('article.search') }}" method="GET" class="d-flex"
+                    role="search">
+                    <button class="btn btn-outline-secondary" type="submit" id="basic-addon2">Search</button>
+                    <input class="form-control ms-2" type="search" name="query" placeholder="Search"
+                        aria-label="Search">
+                </form> --}}
+
+                <livewire:search />
 
                 <x-_locale lang="it" />
                 <x-_locale lang="en" />
@@ -54,7 +55,7 @@
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
                                 class="bi bi-person"></i> {{ auth()->user()->name ?? 'Utente' }}</a>
                                 
                             @if (Auth::user()->is_revisor)
@@ -65,14 +66,13 @@
                             @endif
                         <ul class="dropdown-menu dropdown-menu-end">
                             @if (Auth::user()->is_revisor)
-                                <li class="nav-item text-white">
+                                <li class="nav-item">
                                     <a class="dropdown-item"
                                         href="{{ route('revisor.index') }}">Zona revisore
                                     </a>
                                 </li>
-                                <li class="dropdown-divider"></li>
                             @endif
-                            
+                            <li><hr class="dropdown-divider"></li>
                             {{-- <li><a class="dropdown-item" href="#">Impostazioni</a></li>
                             <li><a class="dropdown-item" href="#">Gestione account</a></li> --}}
                             {{-- <li><hr class="dropdown-divider"></li> --}}
@@ -92,15 +92,18 @@
                         </ul>
                     </li>
                 @else
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="/login">Accedi/Registrati</a>
-                    </li>
                     {{-- <li class="nav-item">
+                        <a class="nav-link" href="/login">{{__('authForm.singIn-singUp')}}</a>
+                    </li> --}}
+                     {{-- <li class="nav-item">
+                        <a class="nav-link" href="/register">Registrati</a>
+                    </li> --}}
+                    <li class="nav-item">
                         <a class="nav-link" href="/login">{{__('ui.login')}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/register">{{__('ui.signup')}}</a>
-                    </li> --}}
+                    </li>
                 @endauth
             </ul>
         </div>
