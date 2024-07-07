@@ -66,7 +66,7 @@
                         </a>
                     </div>
                 </form>
-                <form action="#" class="sign-up-form" id="loginRegisterForm">
+                <form method="POST" action="/register" class="sign-up-form" id="loginRegisterForm">
                     <h2 class="title">{{__('authForm.register')}}</h2>
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
