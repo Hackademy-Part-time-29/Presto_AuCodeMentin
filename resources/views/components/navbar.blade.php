@@ -37,9 +37,9 @@
 
 
             </ul>
-            <ul class="navbar-nav">
+            {{-- <ul class="navbar-nav">
                 <li class="nav-item text-white"><livewire:search /></li>
-            </ul>
+            </ul> --}}
             
             <ul class="navbar-nav">
                 {{-- <li class="nav-item">
@@ -100,7 +100,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/register">{{__('ui.signup')}}</a>
-                    </li>
+                    </li> --}}
                 @endauth
             </ul>
         </div>
