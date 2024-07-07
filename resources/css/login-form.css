@@ -51,11 +51,7 @@
   margin-left: 10px;
 }
 
-.form .forgot-password a {
-  font-size: 11px;
-  color: #0099ff;
-  text-decoration: none;
-}
+
 
 .form .login-button {
   display: block;
@@ -218,6 +214,11 @@ form.sign-in-form {
 .input-field .inputCustom::placeholder {
   color: #aaa;
   font-weight: 500;
+}
+
+.forgot-password a {
+  color: #0099ff;
+  text-decoration: none;
 }
 
 .social-text {
