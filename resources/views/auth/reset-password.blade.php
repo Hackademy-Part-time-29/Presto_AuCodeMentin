@@ -1,17 +1,28 @@
 <x-layout>
 
-    <div class="d-flex justify-content-center">
-        <div class="login row ">
-            <div class="col-12">
-                <div class="heading">Reimposta password</div>
-                <form method="POST" action="/reset-password" class="form">
+    <div class="containerCustom heightCustom">
+        <div class="formsContainer">
+            <div class="loginRegister">
+                <form method="POST" action="{{ route('password.email') }}" id="loginRegisterForm">
                     @csrf
-                    <input name="token" type="hidden" value="{{request()->route('token')}}">                    
-                    <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
-                    <input class="input" name="password" type="password" class="form-control" placeholder="Password">
-                    <input class="input" name="password_confirmation" type="password" class="form-control" placeholder="Ripeti password">                    
-                    <input class="login-button" type="submit" value="Reimposta">
+                    <h2 class="title">Recupera password</h2>
+                    <div class="input-field">
+                        <i class="bi bi-lock-fill text-center"></i>
+                        <input name="email" type="email" class="inputCustom" placeholder="E-mail">
+                    </div>
+                    <input class="primary-button" type="submit" value="Reimposta password">
                 </form>
+            </div>
+        </div>
+        <div class="panels-container">
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Hai dimenticato la password?</h3>
+                    <p>
+                        Recuperala al volo, ma mi raccomando, non dimenticarla ancora!
+                    </p>
+                </div>
+                <img src="{{ asset('img/forgot-password.svg') }}" class="image" alt="" />
             </div>
         </div>
     </div>
