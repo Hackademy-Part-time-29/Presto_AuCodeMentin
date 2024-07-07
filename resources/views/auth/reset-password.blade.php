@@ -19,7 +19,7 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input name="password_confirmation" type="password" class="inputCustom" placeholder="Ripeti password">
                     </div>
-                    <button class="primary-button" type="submit">Reimposta password</button>
+                    <button class="primary-button" type="submit"><a href="/login">Reimposta password</a></button>
                 </form>
             </div>
         </div>
