@@ -9,7 +9,7 @@
                     <input type="hidden" name="token" value="{{request()->route('token')}}">
                     <div class="input-field">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" name="email" type="email" placeholder="Username">
+                        <input class="inputCustom" name="email" type="email" placeholder="Email">
                     </div>
                     <div class="input-field">
                         <i class="bi bi-lock-fill text-center"></i>
@@ -19,7 +19,7 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input name="password_confirmation" type="password" class="inputCustom" placeholder="Ripeti password">
                     </div>
-                    <button class="primary-button" type="submit"><a href="/login">Reimposta password</a></button>
+                    <button class="primary-button" type="submit">Reimposta password</button>
                 </form>
             </div>
         </div>
@@ -31,7 +31,7 @@
                         Mi raccomando, una che ti ricordi!
                     </p>
                 </div>
-                <img src="{{ asset('img/reset-password.svg') }}" class="image" alt="" />
+                <img src="{{ asset('img/reset-password.svg') }}" class="image" alt="">
             </div>
         </div>
     </div>
