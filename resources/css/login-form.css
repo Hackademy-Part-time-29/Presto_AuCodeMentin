@@ -291,12 +291,12 @@ form.sign-in-form {
 
 .left-panel {
   pointer-events: all;
-  padding: 5rem 17% 4rem 12%;
+  padding: 5rem 20% 4rem 21%;
 }
 
 .right-panel {
   pointer-events: none;
-  padding: 5rem 12% 4rem 17%;
+  padding: 5rem 20% 4rem 21%;
 }
 
 .panel .content {

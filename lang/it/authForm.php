@@ -3,7 +3,7 @@ return [
     'login'=>'Accedi',
     'singIn-singUp'=>'Accedi/Registrati',
     'login-social'=>'O registrati con le piattaforme social',
-    'new-user'=>'Sei nuovo qui??',
+    'new-user'=>'Sei nuovo qui?',
     'old-user'=>'Hai già un account?',
     'access'=>"Effettua l'accesso, vendi e compra ciò che vuoi!",
     'desc-NewUser'=>'Benvenuto, se sei un nuovo utente reggistrati cliccando il bottone in basso',
