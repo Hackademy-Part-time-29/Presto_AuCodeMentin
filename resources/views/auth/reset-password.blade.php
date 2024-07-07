@@ -26,12 +26,12 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>Hai dimenticato la password?</h3>
+                    <h3>Imposta la nuova password</h3>
                     <p>
-                        Recuperala al volo, ma mi raccomando, non dimenticarla ancora!
+                        Mi raccomando, una che ti ricordi!
                     </p>
                 </div>
-                <img src="{{ asset('img/forgot-password.svg') }}" class="image" alt="" />
+                <img src="{{ asset('img/reset-password.svg') }}" class="image" alt="" />
             </div>
         </div>
     </div>
