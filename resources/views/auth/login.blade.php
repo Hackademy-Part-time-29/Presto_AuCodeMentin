@@ -49,7 +49,7 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" name="password" type="password" placeholder="Password">
                     </div>
-                    <span class="forgot-password">
+                    <span class="forgot-password mt-2 mb-3">
                         <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
                     </span>
                     <button class="primary-button" type="submit">Login</button>
@@ -101,9 +101,8 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" name="password_confirmation" type="password" type="password" placeholder="Password">
                     </div>
-                    <button class="primary-button" type="submit">{{__('authForm.register')}}</button>
+                    <button class="primary-button mt-2" type="submit">{{__('authForm.register')}}</button>
 
-                    
                     <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
