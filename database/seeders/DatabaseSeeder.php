@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         ['name' => 'Simone' , 'email' => 'simopele@gmail.com', 'password' => 'Abcd1234!'],
         ['name' => 'Samuele' , 'email' => 'samubatta@gmail.com', 'password' => 'Abcd1234!'],
         ['name' => 'Alessio' , 'email' => 'alessio@mail.it', 'password' => 'Abcd1234!'],
-        ['name' => 'Andrea' , 'email' => 'andreafica@gmail.com', 'password' => 'Abcd1234!']
+        ['name' => 'Andrea' , 'email' => 'andreafichera@gmail.com', 'password' => 'Abcd1234!']
     ];
 
    

@@ -50,7 +50,6 @@
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->violence }}">
-                                            <!-- Icon or symbol for 'violence' rating -->
                                         </div>
                                     </div>
                                     <div class="col-10">violence</div>
@@ -58,7 +57,6 @@
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->spoof }}">
-                                            <!-- Icon or symbol for 'spoof' rating -->
                                         </div>
                                     </div>
                                     <div class="col-10">spoof</div>
@@ -66,7 +64,6 @@
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->racy }}">
-                                            <!-- Icon or symbol for 'racy' rating -->
                                         </div>
                                     </div>
                                     <div class="col-10">racy</div>
@@ -74,7 +71,6 @@
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->medical }}">
-                                            <!-- Icon or symbol for 'medical' rating -->
                                         </div>
                                     </div>
                                     <div class="col-10">medical</div>
