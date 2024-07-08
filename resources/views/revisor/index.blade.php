@@ -17,70 +17,77 @@
             </div>
 
         </div>
-        @foreach ($article_to_check->images as $key => $image)
-            <div class="col-6">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded-start"
-                                alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
-                        </div>
-                        <div class="col-md-5 ps-3">
-                            <div class="card-body">
-                                <h5>Labels</h5>
-                                @if ($image->labels)
-                                    @foreach ($image->labels as $label)
-                                        #{{ $label  }}
-                                    @endforeach
-                                @else
-                                    <p>No labels</p>
-                                @endif
+        
+        @if($article_to_check)
+            @foreach ($article_to_check->images as $key => $image)
+                <div class="col-6">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{{ $image->getUrl(400, 400) }}" class="img-fluid rounded-start"
+                                    alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
                             </div>
-                        </div>
-                        <div class="col-md-8 ps-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Ratings</h5>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{ $image->adult }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-10">adult</div>
+                            <div class="col-md-5 ps-3">
+                                <div class="card-body">
+                                    <h5>Labels</h5>
+                                    @if ($image->labels)
+                                        @foreach ($image->labels as $label)
+                                            #{{ $label  }}
+                                        @endforeach
+                                    @else
+                                        <p>No labels</p>
+                                    @endif
                                 </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{ $image->violence }}">
+                            </div>
+                            <div class="col-md-8 ps-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ratings</h5>
+                                    <div class="row justify-content-center">
+                                        <div class="col-2">
+                                            <div class="text-center mx-auto {{ $image->adult }}">
+                                            </div>
                                         </div>
+                                        <div class="col-10">adult</div>
                                     </div>
-                                    <div class="col-10">violence</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{ $image->spoof }}">
+                                    <div class="row justify-content-center">
+                                        <div class="col-2">
+                                            <div class="text-center mx-auto {{ $image->violence }}">
+                                                <!-- Icon or symbol for 'violence' rating -->
+                                            </div>
                                         </div>
+                                        <div class="col-10">violence</div>
                                     </div>
-                                    <div class="col-10">spoof</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{ $image->racy }}">
+                                    <div class="row justify-content-center">
+                                        <div class="col-2">
+                                            <div class="text-center mx-auto {{ $image->spoof }}">
+                                                <!-- Icon or symbol for 'spoof' rating -->
+                                            </div>
                                         </div>
+                                        <div class="col-10">spoof</div>
                                     </div>
-                                    <div class="col-10">racy</div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-2">
-                                        <div class="text-center mx-auto {{ $image->medical }}">
+                                    <div class="row justify-content-center">
+                                        <div class="col-2">
+                                            <div class="text-center mx-auto {{ $image->racy }}">
+                                                <!-- Icon or symbol for 'racy' rating -->
+                                            </div>
                                         </div>
+                                        <div class="col-10">racy</div>
                                     </div>
-                                    <div class="col-10">medical</div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-2">
+                                            <div class="text-center mx-auto {{ $image->medical }}">
+                                                <!-- Icon or symbol for 'medical' rating -->
+                                            </div>
+                                        </div>
+                                        <div class="col-10">medical</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        @endif
 
         @if ($article_to_check)
             <div class="row justify-content-center pt-5">
