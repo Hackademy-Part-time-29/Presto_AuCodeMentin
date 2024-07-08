@@ -6,5 +6,5 @@ return [
     'head'=>'No article to review',
     'btn_accept'=>'Accept',
     'btn_delete'=>'Delete',
-    'author'=>'Author:',
+    'author'=>'Author',
 ];
