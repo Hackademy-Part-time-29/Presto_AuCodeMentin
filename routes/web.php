@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\ResetPasswordController;
 
 Route::get('/', [PublicController::class,'homepage'])->name('home');
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
@@ -19,7 +20,6 @@ Route::patch('/reject/{article}',[RevisorController::class,'reject'])->name('rej
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 Route::patch('/rollback/{article}',[RevisorController::class,'rollback'])->name('rollback');
-Route::get('/thankYou', [PublicController::class, 'thankYou'])->name('thankYou');
 
 // cambio lingua
 Route::post('/lingua/{lang}', [PublicController::class, 'setLenguage'])->name('setLocale');
