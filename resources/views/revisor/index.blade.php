@@ -11,14 +11,81 @@
 
         <div class="row">
             <div class="col-12 mt-5">
-                <div class="rounded shadow bg-body-secondary">
-                    <h1 class="display-5 text-center pb-2">
-                        {{ __('revisor.dashboard') }}
-                    </h1>
-                </div>
+                <h1 class="display-5 text-center pb-2">
+                    {{ __('revisor.dashboard') }}
+                </h1>
             </div>
 
         </div>
+        @foreach ($article_to_check->images as $key => $image)
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded-start"
+                                alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
+                        </div>
+                        <div class="col-md-5 ps-3">
+                            <div class="card-body">
+                                <h5>Labels</h5>
+                                @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                        #{{ $label  }}
+                                    @endforeach
+                                @else
+                                    <p>No labels</p>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-md-8 ps-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Ratings</h5>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->adult }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-10">adult</div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->violence }}">
+                                            <!-- Icon or symbol for 'violence' rating -->
+                                        </div>
+                                    </div>
+                                    <div class="col-10">violence</div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->spoof }}">
+                                            <!-- Icon or symbol for 'spoof' rating -->
+                                        </div>
+                                    </div>
+                                    <div class="col-10">spoof</div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->racy }}">
+                                            <!-- Icon or symbol for 'racy' rating -->
+                                        </div>
+                                    </div>
+                                    <div class="col-10">racy</div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->medical }}">
+                                            <!-- Icon or symbol for 'medical' rating -->
+                                        </div>
+                                    </div>
+                                    <div class="col-10">medical</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+
         @if ($article_to_check)
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
@@ -98,13 +165,11 @@
             <div class="col-4">
                 @if ($latest_article)
                     <div class="col-3">
-                        <form action="{{ route('rollback', ['article' => $latest_article]) }}"
-                            method="POST">
+                        <form action="{{ route('rollback', ['article' => $latest_article]) }}" method="POST">
                             @csrf
                             @method('PATCH')
 
-                            <button
-                                class="btn btn-warning py-2 px-5 fw-bold">{{ __('revisor.btn_last') }}</button>
+                            <button class="btn btn-warning py-2 px-5 fw-bold">{{ __('revisor.btn_last') }}</button>
                         </form>
                     </div>
                 @endif
