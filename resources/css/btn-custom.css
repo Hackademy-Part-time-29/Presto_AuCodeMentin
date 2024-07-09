@@ -1,5 +1,9 @@
 /* Bottone */
 
+a {
+    text-decoration: none;
+}
+
 .primary-button {
     padding: 12.5px 30px;
     margin: 0px;
