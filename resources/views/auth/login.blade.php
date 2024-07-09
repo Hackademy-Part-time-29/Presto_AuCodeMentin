@@ -1,42 +1,12 @@
 <x-layout>
-    {{-- <div class="d-flex justify-content-center card-container">
-        <div class="login row ">
-            <div class="col-12">
-                <div class="heading">{{ __('authForm.login') }}</div>
-                <form method="POST" action="/login" class="form">
-                    @csrf
-                    <input class="input" name="email" type="email" class="form-control" placeholder="E-mail">
-                    @error('email')
-                        <p class="fst-italic text-danger">
-                            {{ $message }}
-                        </p>
-                    @enderror
-                    <input class="input" name="password" type="password" class="form-control" placeholder="Password">
-                    @error('password')
-                        <p class="fst-italic text-danger">
-                            {{ $message }}
-                        </p>
-                    @enderror
-                    <span class="forgot-password">
-                        <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
-                    </span>
-                    <span class="forgot-password">
-                        <a href="{{ route('register') }}">{{ __('authForm.register_msg') }}</a>
-                    </span>
-                    <input class="login-button" type="submit" value="{{ __('authForm.sign_in') }}">
-                </form>
-            </div>
-        </div>
-    </div> --}}
-
     {{-- Form js --}}
     <div class="containerCustom heightCustom">
         <div class="formsContainer">
             <div class="loginRegister">
                 <form method="POST" action="/login" class="sign-in-form" id="loginRegisterForm">
                     @csrf
-                    <h2 class="title">{{__('authForm.login')}}</h2>
-                    <div class="input-field">
+                    <h2 class="title mb-3">{{__('authForm.login')}}</h2>
+                    <div class="input-field mb-3">
                         <i class="bi bi-person-fill text-center"></i>
                         <input class="inputCustom" name="email" type="email" placeholder="Username">
                     </div>
@@ -45,14 +15,14 @@
                             {{ $message }}
                         </p>
                     @enderror
-                    <div class="input-field">
+                    <div class="input-field mb-3">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" name="password" type="password" placeholder="Password">
                     </div>
-                    <span class="forgot-password mt-2 mb-3">
+                    <span class="forgot-password mt-2 mb-2">
                         <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
                     </span>
-                    <button class="primary-button" type="submit">Login</button>
+                    <button class="primary-button mb-3" type="submit">Login</button>
 
                     <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">
@@ -69,8 +39,8 @@
                 </form>
                 <form method="POST" action="/register" class="sign-up-form" id="loginRegisterForm">
                     @csrf
-                    <h2 class="title">{{__('authForm.register')}}</h2>
-                    <div class="input-field">
+                    <h2 class="title mb-3">{{__('authForm.register')}}</h2>
+                    <div class="input-field mb-3">
                         <i class="bi bi-person-fill text-center"></i>
                         <input class="inputCustom" name="name" type="text" placeholder="Username">
                     </div>
@@ -79,7 +49,7 @@
                             {{ $message }}
                         </p>
                     @enderror
-                    <div class="input-field">
+                    <div class="input-field mb-3">
                         <i class="bi bi-envelope-fill text-center"></i>
                         <input class="inputCustom" name="email" type="email" placeholder="Email">
                     </div>
@@ -88,7 +58,7 @@
                             {{ $message }}
                         </p>
                     @enderror
-                    <div class="input-field">
+                    <div class="input-field mb-3">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" name="password" type="password" placeholder="Password">
                     </div>
@@ -97,11 +67,11 @@
                             {{ $message }}
                         </p>
                     @enderror
-                    <div class="input-field">
+                    <div class="input-field mb-3">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input class="inputCustom" name="password_confirmation" type="password" type="password" placeholder="Password">
+                        <input class="inputCustom" name="password_confirmation" type="password" type="password" placeholder="Conferma password">
                     </div>
-                    <button class="primary-button mt-2" type="submit">{{__('authForm.register')}}</button>
+                    <button class="primary-button mt-2 mb-2" type="submit">{{__('authForm.register')}}</button>
 
                     <p class="social-text">{{__('authForm.login-social')}}</p>
                     <div class="social-media">
