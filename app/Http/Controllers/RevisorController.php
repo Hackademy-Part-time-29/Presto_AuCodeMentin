@@ -34,6 +34,10 @@ class RevisorController extends Controller
         ->with('message',"Hai rifiutato l'articolo $article->title");
     }
 
+    public function formRevisor(){
+        return view("revisor.form");
+    }
+
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->route('home')->with('message', 'Complimenti, Hai richiesto di diventare revisor');
