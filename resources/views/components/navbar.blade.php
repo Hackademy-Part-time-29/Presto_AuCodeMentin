@@ -13,19 +13,19 @@
                     <a class="nav-link text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('article.index') }}">{{__('ui.article')}}</a>
+                    <a class="nav-link text-white" href="{{ route('article.index') }}">{{ __('ui.article') }}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        {{__('ui.categories')}}
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ __('ui.categories') }}
                     </a>
                     <ul class="dropdown-menu">
 
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
-                                    href="{{ route('byCategory', ['category' => $category->id]) }}">{{ __('categories.'. $category->name) }}</a>
+                                    href="{{ route('byCategory', ['category' => $category->id]) }}">{{ __('categories.' . $category->name) }}</a>
                                 @if (!$loop->last)
                                     {{-- <hr class="dropdown-divider"> --}}
                                 @endif
@@ -33,46 +33,69 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item"><livewire:search /></li>
-
-
+                <li class="nav-item">
+                    <livewire:search />
+                </li>
             </ul>
-            {{-- <ul class="navbar-nav">
-                <li class="nav-item text-white"><livewire:search /></li>
+
+
+
+            {{-- <ul class="dropdown-menu bg-flag-custom text-end  dropdown-menu-end ">
+                <li class="nav-item"><x-_locale lang="en"/></li>
+                <li class="nav-item"><x-_locale lang="es"/></li>
+                <li class="nav-item"><x-_locale lang="it"/></li>
             </ul> --}}
-            
+
             <ul class="navbar-nav">
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-cart"></i> Carrello</a>
-                </li> --}}
 
-                
+                <li class="nav-item dropdown">
+                    <ul class="nav-link dropdown-menu m-0 pt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        @if (session('locale') == 'es')
+                            <li class="nav-item"><x-_locale lang="es" /></li>
+                        @elseif(session('locale') == 'en')
+                            <li class="nav-item"><x-_locale lang="en" /></li>
+                        @else
+                            <li class="nav-item"><x-_locale lang="it" /></li>
+                        @endif
+                    </ul>
+                </li>
 
-                <x-_locale lang="it" />
+
+                {{-- <ul class="nav-link dropdown m-0 pt-1" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    @if (session('locale') == 'es')
+                        <li class="nav-item"><x-_locale lang="es" /></li>
+                    @elseif(session('locale') == 'en')
+                        <li class="nav-item"><x-_locale lang="en" /></li>
+                    @else
+                        <li class="nav-item"><x-_locale lang="it" /></li>
+                    @endif
+                </ul> --}}
+
+                {{-- <x-_locale lang="it" />
                 <x-_locale lang="en" />
-                <x-_locale lang="es" />
+                <x-_locale lang="es" /> --}}
 
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
-                                class="bi bi-person"></i> {{ auth()->user()->name ?? 'Utente' }}</a>
-                                
-                            @if (Auth::user()->is_revisor)
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    {{ \App\Models\Article::toBeRevisedCount() }}
-                                </span>
-                            @endif
+                        <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown"><i class="bi bi-person"></i>
+                            {{ auth()->user()->name ?? 'Utente' }}</a>
+
+                        @if (Auth::user()->is_revisor)
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {{ \App\Models\Article::toBeRevisedCount() }}
+                            </span>
+                        @endif
                         <ul class="dropdown-menu dropdown-menu-end">
                             @if (Auth::user()->is_revisor)
                                 <li class="nav-item text-white">
-                                    <a class="dropdown-item"
-                                        href="{{ route('revisor.index') }}">Zona revisore
+                                    <a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore
                                     </a>
                                 </li>
                                 <li class="dropdown-divider"></li>
                             @endif
-                            
+
                             {{-- <li><a class="dropdown-item" href="#">Impostazioni</a></li>
                             <li><a class="dropdown-item" href="#">Gestione account</a></li> --}}
                             {{-- <li><hr class="dropdown-divider"></li> --}}
@@ -85,7 +108,6 @@
                                     Logout
                                 </a>
                             </li>
-
                             <form id="form-logout" method="POST" action="/logout" class="d-none">
                                 @csrf
                             </form>
@@ -93,7 +115,7 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/login">{{__('authForm.singIn-singUp')}}</a>
+                        <a class="nav-link text-white" href="/login">{{ __('authForm.singIn-singUp') }}</a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="/login">{{__('ui.login')}}</a>
