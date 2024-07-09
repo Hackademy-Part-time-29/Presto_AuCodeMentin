@@ -1,5 +1,7 @@
 <?php
 return [
+    'title'=>'¿Quieres convertirte en Revisor?',
+    'desc_NewRev'=>'Si quieres ayudarnos a hacer de nuestra tienda un lugar mejor, haz clic aquí y evaluaremos tu solicitud!',
     'btn_back'=>'Volver a la página de inicio',
     'btn_last'=>'Cancelar última operación',
     'dashboard'=>'Panel de control revisor',

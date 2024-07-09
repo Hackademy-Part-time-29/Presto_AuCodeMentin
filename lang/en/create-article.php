@@ -1,10 +1,10 @@
 <?php
 return [
     'head'=>'Publish an article',
-    'title'=>'Title:',
-    'description'=>'Description:',
-    'price_in'=>'Price in €:',
-    'select_cat'=>'Choose a category:',
+    'title'=>'Title',
+    'description'=>'Description',
+    'price_in'=>'Price in €',
+    'select_cat'=>'Choose a category',
     'select_file'=>'Pick files',
     'selezione'=>'Selection',
     'prev-photo'=>'Photo preview',
