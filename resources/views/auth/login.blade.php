@@ -96,7 +96,7 @@
                     <p>
                        {{__('authForm.desc-NewUser')}}
                     </p>
-                    <button class="btn btnCustomLogin secondary-button" id="sign-up-btn">
+                    <button class="secondary-button" id="sign-up-btn">
                         {{__('authForm.register')}}
                     </button>
                 </div>
@@ -108,7 +108,7 @@
                     <p class="text-center">
                         {{__('authForm.access')}}
                     </p>
-                    <button class="btn btnCustomLogin secondary-button" id="sign-in-btn">
+                    <button class="secondary-button" id="sign-in-btn">
                         {{__('authForm.login')}}
                     </button>
                 </div>

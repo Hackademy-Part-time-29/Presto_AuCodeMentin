@@ -317,12 +317,6 @@ form.sign-in-form {
   padding: 0.7rem 0;
 }
 
-.btnCustomLogin {
-  background: none;
-  width: 130px;
-  height: 41px;
-}
-
 .right-panel .image,
 .right-panel .content {
   transform: translateX(1000px);
