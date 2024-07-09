@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
+    <div class="container-fluid mx-4">
         <a class="navbar-brand text-white" href="{{ route('home') }}">
             <img src="{{ asset('img/Logo-navbar-bianco.png') }}" alt="CodeCommerce Logo" class="logo">
             {{ env('APP_NAME') }}</a>
@@ -7,8 +7,8 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
@@ -33,67 +33,35 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item dropdown me-3">
+                    <a class="nav-item dropdown me-3nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><x-_locale lang="{{ session('locale') ?? 'it' }}" /></a>
+    
+                    <ul class="dropdown-menu dropdown-menu-start">
+                        <div class="d-flex">
+                            @if (session('locale') != 'es')
+                                <li class="nav-item m-auto"><x-_locale lang="es" /></li>
+                            @endif
+                            @if(session('locale') != 'en')
+                                <li class="border-end"></li>
+                                <li class="nav-item m-auto"><x-_locale lang="en" /></li>
+                            @endif
+                            <li class="border-start"></li>
+                            @if (session('locale') != 'it')
+                            <li class="nav-item m-auto"><x-_locale lang="it" /></li>
+                            @endif
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <livewire:search />
                 </li>
             </ul>
-
-
-
-            {{-- <ul class="dropdown-menu bg-flag-custom text-end  dropdown-menu-end ">
-                <li class="nav-item"><x-_locale lang="en"/></li>
-                <li class="nav-item"><x-_locale lang="es"/></li>
-                <li class="nav-item"><x-_locale lang="it"/></li>
-            </ul> --}}
-
+            
             <ul class="navbar-nav">
-
-                <!-- <li class="nav-item dropdown">
-                    <ul class="nav-link dropdown-menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        @if (session('locale') == 'es')
-                            </li><li class="nav-item"><x-_locale lang="it" /></li>
-                        @elseif(session('locale') == 'en')
-                            <li class="nav-item"><x-_locale lang="en" /></li>
-                        @else
-                            <li class="nav-item"><x-_locale lang="es" /></li>
-                        @endif
-                    </ul>
-                </li> -->
-                <div class="nav-item dropdown mr-3 ">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                    @if(session('locale')=='es')
-                        <li><x-_locale lang="es"/></li>
-                    @elseif(session('locale')=='en')
-                        <li><x-_locale lang="en"/></li>
-                    @else
-                        <li><x-_locale lang="it"/></li>
-                    @endif
-                    </a>
-                    <ul class="dropdown-menu">
-                        <div class="lang-container">
-                        <li><x-_locale lang="it"/></li>
-                        <li><x-_locale lang="en"/></li>
-                        <li><x-_locale lang="es"/></li>
-                        </div>
-                    </ul>
-                </div>
-
-
-                <!-- {{-- <ul class="nav-link dropdown m-0 pt-1" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    @if (session('locale') == 'es')
-                        <li class="nav-item"><x-_locale lang="es" /></li>
-                    @elseif(session('locale') == 'en')
-                        <li class="nav-item"><x-_locale lang="en" /></li>
-                    @else
-                        <li class="nav-item"><x-_locale lang="it" /></li>
-                    @endif
-                </ul> --}} -->
-
-                {{-- <x-_locale lang="it" />
-                <x-_locale lang="en" />
-                <x-_locale lang="es" /> --}}
-
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white dropdown-toggle" href="#" role="button"
@@ -135,12 +103,6 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/login">{{ __('authForm.singIn-singUp') }}</a>
                     </li>
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="/login">{{__('ui.login')}}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">{{__('ui.signup')}}</a>
-                    </li> --}}
                 @endauth
             </ul>
         </div>

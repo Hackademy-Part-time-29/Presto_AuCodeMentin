@@ -10,9 +10,12 @@
     align-items: center;
 }
 
+    
 .box:hover .input-search{
     width: 200px;
 }
+
+
 
 .box .input-search{
     width: 0;
@@ -31,4 +34,16 @@
     border: none;
     background: none;
     outline: none;
+}
+
+@media(max-width: 870px){
+    .box{
+        height: 30px;
+        display: flex;
+        cursor: pointer;
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 30px;
+        align-items: center;
+    }
 }
