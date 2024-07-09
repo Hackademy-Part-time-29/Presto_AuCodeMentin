@@ -51,11 +51,7 @@
   margin-left: 10px;
 }
 
-.form .forgot-password a {
-  font-size: 11px;
-  color: #0099ff;
-  text-decoration: none;
-}
+
 
 .form .login-button {
   display: block;
@@ -131,7 +127,7 @@
 .containerCustom {
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--color-white);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -187,7 +183,7 @@ form.sign-in-form {
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: #fff;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -218,6 +214,11 @@ form.sign-in-form {
 .input-field .inputCustom::placeholder {
   color: #aaa;
   font-weight: 500;
+}
+
+.forgot-password a {
+  color: #0099ff;
+  text-decoration: none;
 }
 
 .social-text {
@@ -314,12 +315,6 @@ form.sign-in-form {
 .panel p {
   font-size: 0.95rem;
   padding: 0.7rem 0;
-}
-
-.btnCustomLogin {
-  background: none;
-  width: 130px;
-  height: 41px;
 }
 
 .right-panel .image,

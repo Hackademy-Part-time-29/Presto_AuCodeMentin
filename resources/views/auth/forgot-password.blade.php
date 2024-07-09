@@ -2,14 +2,14 @@
     <div class="containerCustom heightCustom">
         <div class="formsContainer">
             <div class="forgotPassword">
-                <form method="POST" action="{{ route('password.email') }}" id="loginRegisterForm">
+                <form method="POST" action="{{ route('password.email') }}" class="sign-in-form" id="loginRegisterForm">
                     @csrf
-                    <h2 class="title">Password dimenticata?</h2>
-                    <div class="input-field">
+                    <h2 class="title mb-3">Password dimenticata?</h2>
+                    <div class="input-field mb-4">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input name="email" type="email" class="inputCustom" placeholder="E-mail">
                     </div>
-                    <button class="primary-button" type="submit">Reimposta password</button>
+                    <button class="primary-button mb-3" type="submit">Reimposta password</button>
                 </form>
             </div>
         </div>
