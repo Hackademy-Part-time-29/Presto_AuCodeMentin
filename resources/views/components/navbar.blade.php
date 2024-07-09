@@ -48,20 +48,38 @@
 
             <ul class="navbar-nav">
 
-                <li class="nav-item dropdown">
-                    <ul class="nav-link dropdown-menu m-0 pt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <!-- <li class="nav-item dropdown">
+                    <ul class="nav-link dropdown-menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         @if (session('locale') == 'es')
-                            <li class="nav-item"><x-_locale lang="es" /></li>
+                            </li><li class="nav-item"><x-_locale lang="it" /></li>
                         @elseif(session('locale') == 'en')
                             <li class="nav-item"><x-_locale lang="en" /></li>
                         @else
-                            <li class="nav-item"><x-_locale lang="it" /></li>
+                            <li class="nav-item"><x-_locale lang="es" /></li>
                         @endif
                     </ul>
-                </li>
+                </li> -->
+                <div class="nav-item dropdown mr-3 ">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    @if(session('locale')=='es')
+                        <li><x-_locale lang="es"/></li>
+                    @elseif(session('locale')=='en')
+                        <li><x-_locale lang="en"/></li>
+                    @else
+                        <li><x-_locale lang="it"/></li>
+                    @endif
+                    </a>
+                    <ul class="dropdown-menu">
+                        <div class="lang-container">
+                        <li><x-_locale lang="it"/></li>
+                        <li><x-_locale lang="en"/></li>
+                        <li><x-_locale lang="es"/></li>
+                        </div>
+                    </ul>
+                </div>
 
 
-                {{-- <ul class="nav-link dropdown m-0 pt-1" href="#" role="button" data-bs-toggle="dropdown"
+                <!-- {{-- <ul class="nav-link dropdown m-0 pt-1" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     @if (session('locale') == 'es')
                         <li class="nav-item"><x-_locale lang="es" /></li>
@@ -70,7 +88,7 @@
                     @else
                         <li class="nav-item"><x-_locale lang="it" /></li>
                     @endif
-                </ul> --}}
+                </ul> --}} -->
 
                 {{-- <x-_locale lang="it" />
                 <x-_locale lang="en" />
