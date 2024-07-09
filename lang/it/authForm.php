@@ -6,7 +6,7 @@ return [
     'new-user'=>'Sei nuovo qui?',
     'old-user'=>'Hai già un account?',
     'access'=>"Effettua l'accesso, vendi e compra ciò che vuoi!",
-    'desc-NewUser'=>'Benvenuto, se sei un nuovo utente reggistrati cliccando il bottone in basso',
+    'desc-NewUser'=>'Benvenuto, se sei un nuovo utente registrati cliccando il bottone in basso',
     'forgotten_pass'=>'Password dimenticata?',
     'register_msg'=>'Se sei già registrato,accedi!',
     'sign_in'=>'Sign In',
