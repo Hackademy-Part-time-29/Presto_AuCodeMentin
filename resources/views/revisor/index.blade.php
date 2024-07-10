@@ -92,7 +92,7 @@
         @if ($article_to_check)
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
-                    <div class="row justify-content-center">
+                    {{-- <div class="row justify-content-center">
 
                         @if ($article_to_check->images->count())
                             @foreach ($article_to_check->images as $key => $image)
@@ -109,7 +109,7 @@
                                 </div>
                             @endfor
                         @endif
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
                     <h1>{{ $article_to_check->title }}</h1>
