@@ -21,33 +21,29 @@
                         {{ __('ui.categories') }}
                     </a>
                     <ul class="dropdown-menu">
-
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
                                     href="{{ route('byCategory', ['category' => $category->id]) }}">{{ __('categories.' . $category->name) }}</a>
-                                @if (!$loop->last)
-                                    {{-- <hr class="dropdown-divider"> --}}
-                                @endif
                             </li>
                         @endforeach
                     </ul>
                 </li>
                 <li class="nav-item dropdown me-3">
                     <a class="nav-item dropdown me-3nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false"><x-_locale lang="{{ session('locale') ?? 'it' }}" /></a>
+                        aria-expanded="false"><x-_locale lang="{{ App::currentLocale()  }}" /></a>
     
                     <ul class="dropdown-menu dropdown-menu-start">
                         <div class="d-flex">
-                            @if (session('locale') != 'es')
+                            @if ( App::currentLocale() != 'es')
                                 <li class="nav-item m-auto"><x-_locale lang="es" /></li>
                             @endif
-                            @if(session('locale') != 'en')
+                            @if( App::currentLocale() != 'en')
                                 <li class="border-end"></li>
                                 <li class="nav-item m-auto"><x-_locale lang="en" /></li>
                             @endif
                             <li class="border-start"></li>
-                            @if (session('locale') != 'it')
+                            @if ( App::currentLocale() != 'it')
                             <li class="nav-item m-auto"><x-_locale lang="it" /></li>
                             @endif
                         </div>

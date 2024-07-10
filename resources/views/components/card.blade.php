@@ -8,13 +8,11 @@
                 <h5 class="cardTitle">{{ $article->title }}</h5>
                 <h6 class="price">{{ $article->price }} €</h6>
                 <div class="row">
-                    <div class="col-md-6 col-12"><a href="{{ route('article.show', compact('article')) }}"
-                            class="btn primary-button mb-2">{{ __('articles.btn_detail') }}</a></div>
-                    <div class="col-md-6 col-12"><a href="{{ route('byCategory', ['category' => $article->category]) }}"
+                    <div class="col-12 text-center"><a href="{{ route('article.show', compact('article')) }}"
+                            class="btn primary-button mb-3">{{ __('articles.btn_detail') }}</a></div>
+                    <div class="col-12 text-center"><a href="{{ route('byCategory', ['category' => $article->category]) }}"
                             class="btn secondary-button">{{ __('categories.' . $article->category->name) }}</a></div>
                 </div>
-
-
             </div>
         </article>
     </div>
