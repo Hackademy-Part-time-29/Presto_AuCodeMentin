@@ -1,7 +1,7 @@
 <div class="cardCustom">
     <div class="card__container">
         <article class="card__article">
-            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl() : 'https://picsum.photos/200' }}"
+            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(400, 400) : './img/img_cat/cat'.($article->category->id).'.jpeg'}}"
                 class="card__img" alt="Immagine dell'articolo {{ $article->title }}">
 
             <div class="card__data">
