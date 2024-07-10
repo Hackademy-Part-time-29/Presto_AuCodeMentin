@@ -21,14 +21,10 @@
                         {{ __('ui.categories') }}
                     </a>
                     <ul class="dropdown-menu">
-
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
                                     href="{{ route('byCategory', ['category' => $category->id]) }}">{{ __('categories.' . $category->name) }}</a>
-                                @if (!$loop->last)
-                                    {{-- <hr class="dropdown-divider"> --}}
-                                @endif
                             </li>
                         @endforeach
                     </ul>

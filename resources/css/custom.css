@@ -1,29 +1,13 @@
-.m-custom{
+.m-custom {
   margin-top: 66px;
   min-height: 100vh;
 }
 
-.heightCustom{
+.heightCustom {
   min-height: 100vh;
   height: 100%;
   margin-bottom: 100px;
 }
-
-/* Home */
-
-.rounded-gradient {
-    background: var(--primary-color);
-    border-radius: 0% 0% 22% 22% / 0% 0% 24% 24%;
-    width: 100%;
-    padding: 100px 40px 40px 40px ;
-    color: var(--color-white); /* Aggiunto per migliorare la leggibilità del testo */
-}
-
-.align-items-center {
-    height: 100%; /* Assicura che i contenuti siano centrati verticalmente all'interno della riga */
-}
-
-
 
 
 .logoSfondo {
@@ -32,11 +16,10 @@
 }
 
 
-  /* Custom Img Preview */
-  .img-preview {
-    background-position: center;  
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 120px;
-    width: 120px;
-  }
+.img-preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+}
