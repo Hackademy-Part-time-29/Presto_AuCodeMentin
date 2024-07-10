@@ -12,3 +12,11 @@
     backdrop-filter: blur(5.3px);
     -webkit-backdrop-filter: blur(5.3px);
 }
+
+.navbar-toggler{
+    border:none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
