@@ -5,6 +5,7 @@ return [
     'object'=>'Title:',
     'price'=>'Price:',
     'description'=>'Description:',
+    'category'=>'Categoty',
     //by category
     'head'=>'Articles from category ',
     'not_article'=>"No articles have been created for this category yet.",
