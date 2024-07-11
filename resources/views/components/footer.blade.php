@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase">{{env('APP_NAME')}}</h5>
-          <p>Il tuo negozio online di fiducia.</p>
+          <p>{{__('ui.descContacts')}}</p>
         </div>
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase">{{__('ui.contacts')}}</h5>
