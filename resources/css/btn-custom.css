@@ -120,6 +120,34 @@ a {
     transform: scale(0.98);
 }
 
+.success-button{
+    /* padding: 12.5px 30px; */
+    margin: 0px;
+    border: 0;
+    width: auto;
+    height: auto;
+    border-radius: 100px;
+    background-color: var(--color-success);
+    color: var(--color-white);
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.success-button:hover {
+    color: var(--color-white);
+    background-color: var(--color-success);
+    transform: scale(1.1);
+}
+
+.success-button:active {
+    color: var(--color-white);
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
 
 
 @media (max-width:720px) {
