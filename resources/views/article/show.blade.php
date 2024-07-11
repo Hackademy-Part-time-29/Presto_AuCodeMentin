@@ -3,7 +3,7 @@
         <!-- Titolo dell'articolo -->
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="display-4">Dettaglio dell'articolo: {{ $article->title }}</h1>
+                <h1 class="display-4">Dettaglio dell'articolo</h1>
             </div>
         </div>
 
@@ -40,11 +40,11 @@
             </div>
 
         <!-- Dettagli dell'articolo -->
-        <div class="col-12 col-md-6 mb-3 height-custom text-center">
+        <div class="col-12 col-md-6 mb-3 height-custom text-start">
             <h2 class="display-5"><span class="fw-bold">Titolo: </span>{{ $article->title }}</h2>
             <div class="d-flex flex-column justify-content-center h-75">
-                <h4 class="fw-bold">Prezzo: {{ $article->price }} €</h4>
-                <h5>Descrizione :</h5>
+                <h4 class="fw-bold mb-5">Prezzo: {{ $article->price }} €</h4>
+                <h5 class="fw-bold">Descrizione :</h5>
                 <p>{{ $article->description }}</p>
             </div>
         </div>
