@@ -35,16 +35,16 @@
 
                     <ul class="dropdown-menu dropdown-menu-start">
                         <div class="d-flex">
-                            @if (App::currentLocale() != 'es')
-                                <li class="nav-item m-auto"><x-_locale lang="es" /></li>
-                            @endif
                             @if (App::currentLocale() != 'en')
-                                <li class="border-end"></li>
                                 <li class="nav-item m-auto"><x-_locale lang="en" /></li>
                             @endif
-                            <li class="border-start"></li>
                             @if (App::currentLocale() != 'it')
+                                <li class="border-end"></li>
                                 <li class="nav-item m-auto"><x-_locale lang="it" /></li>
+                            @endif
+                            <li class="border-start"></li>
+                            @if (App::currentLocale() != 'es')
+                                <li class="nav-item m-auto"><x-_locale lang="es" /></li>
                             @endif
                         </div>
                     </ul>
