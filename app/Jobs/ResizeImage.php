@@ -40,7 +40,7 @@ class ResizeImage implements ShouldQueue
         Image::load($srcPath)
             ->resize(400, 400)
             ->watermark(
-                base_path('public/img/favicon.png'),
+                base_path('public/img/Logo-navbar-bianco.png'),
                 width: 50,
                 height: 50,
                 paddingX: 5,

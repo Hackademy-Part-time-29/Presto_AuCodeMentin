@@ -61,7 +61,7 @@
 
         <div class=" d-flex justify-content-center align-items-center">
             <label class="thertiry-button mb-3 " for="file">
-                <span class="input-group"><i class="bi bi-images">
+                <span class="input-group text-center"><i class="bi bi-images">
                     {{__('create-article.selezione')}}</i></span>
                 <input type="file" id="file" wire:model.live="temporary_images" multiple
                     class=" @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">

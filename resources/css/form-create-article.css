@@ -1,5 +1,5 @@
 .container-custom {
-    max-width: auto;
+    width: auto;
     background: var(--color-white);
     border-radius: 40px;
     padding: 25px 35px;

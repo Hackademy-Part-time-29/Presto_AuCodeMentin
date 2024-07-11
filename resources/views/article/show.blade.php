@@ -5,8 +5,8 @@
         <h1 class="heading">{{ __('categories.title') }}</h1>
     </div>
 
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="container-custom container">
+    <div class="d-flex justify-content-center align-items-center margin-custom">
+        <div class="container-custom container ">
             <!-- Contenuto dell'articolo -->
             <div class="row justify-content-center py-5">
                 <div class="col-12 col-md-6 mb-3">

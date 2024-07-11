@@ -5,7 +5,7 @@ return [
     'object'=>'Titulo:',
     'price'=>'Precio:',
     'description'=>'Descripción:',
-    'category'=>'categoría',
+    'category'=>'categoría:',
     //by category
     'head'=>'Artículos de la categoría ',
     'not_article'=>'Todavía no se han creado artículos para esta categoría',
