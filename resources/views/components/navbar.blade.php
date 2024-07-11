@@ -64,7 +64,7 @@
                             data-bs-toggle="dropdown"><i class="bi bi-person"></i>
                             {{ auth()->user()->name ?? 'Utente' }}</a>
 
-                        @if (Auth::user()->is_revisor)
+                        @if (Auth::user()->is_revisor && \App\Models\Article::toBeRevisedCount() != 0)
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ \App\Models\Article::toBeRevisedCount() }}
                             </span>

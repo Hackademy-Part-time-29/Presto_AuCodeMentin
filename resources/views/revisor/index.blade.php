@@ -24,7 +24,7 @@
                         <div class="col-7 card">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="{{ $image->getUrl(400, 400) }}" class="img-fluid rounded-start"
+                                    <img src="{{ $image->getUrl(400, 400) ?? './img/img_cat/cat'.($article->category->id).'.jpeg'}}" class="img-fluid rounded-start"
                                         alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
                                 </div>
                                 {{-- <div class="col-md-5 ps-3">
@@ -100,7 +100,7 @@
         @if ($article_to_check)
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
-                    {{-- <div class="row justify-content-center">
+                    <div class="row justify-content-center">
 
                         @if ($article_to_check->images->count())
                             @foreach ($article_to_check->images as $key => $image)
@@ -110,14 +110,14 @@
                                 </div>
                             @endforeach
                         @else
-                            @for ($i = 0; $i < 6; $i++)
+                            @for ($i = 0; $i < 3; $i++)
                                 <div class="col-6 col-md-4 mb-4 text-center">
-                                    <img src="https://picsum.photos/308" class="img-fluid rounded shadow"
+                                    <img src="{{'/img/img_cat/cat'.($article_to_check->category->id).'.jpeg'}}" class="img-fluid rounded shadow"
                                         alt="immagine segnaposto">
                                 </div>
                             @endfor
                         @endif
-                    </div> --}}
+                    </div>
                 </div>
                 <div class="row">
                     <div class="d-flex justify-content-center align-item-center">
