@@ -98,7 +98,7 @@
 
 
         @if ($article_to_check)
-            <div class="row justify-content-center pt-5">
+            <div class="row justify-content-center py-5">
                 {{-- <div class="col-md-8">
                     <div class="row justify-content-center">
 
