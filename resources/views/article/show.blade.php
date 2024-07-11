@@ -34,7 +34,7 @@
                             @endif
                         </div>
                     @else
-                        <img src="{{ '/img/img_cat/cat' . $article->category->id . '.jpeg' }}"
+                        <img src="{{ '/img/img_cat/cat' . $article->category->id . '.jpeg' }}" class="img-fluid"
                             alt="Nessuna foto inserita dall'utente">
                     @endif
                 </div>
