@@ -7,20 +7,24 @@
             </div>
         </div>
     @endif
-    
-    <div class="container-fluid rounded-gradient">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1> {{ __('home.welcome') }} {{ env('APP_NAME') }}</h1>
-                <h4>{{__('home.desc_welcome')}}</h4>
-                <a href="{{ route('article.create') }}" class="btn secondary-button me-3"><i class="bi bi-plus-circle"></i> {{__('home.add_article')}}</a>
-            </div>
-            <div class="col-md-6 text-md-end text-center">
-                <img src="{{ asset('img/codecommerce-sfondo.png') }}" class="logoSfondo" alt="Logo">
+
+    <div class="rounded-gradient">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 mb-3 mb-md-0 text-center text-md-start">
+                    <h1 class="mb-md-3"> {{ __('home.welcome') }} {{ env('APP_NAME') }}</h1>
+                    <h4>{{ __('home.desc_welcome') }}</h4>
+                    <a href="{{ route('article.create') }}" class="btn secondary-button mt-md-3"><i
+                            class="bi bi-plus-circle"></i> {{ __('home.add_article') }}</a>
+                </div>
+                <div class="col-12 col-md-6 text-md-end text-center text-md-start">
+                    <img src="{{ asset('img/codecommerce-sfondo.png') }}" class="logoSfondo" alt="Logo">
+                </div>
             </div>
         </div>
+
     </div>
-    
+
 
 
     <div class="container">
@@ -30,13 +34,13 @@
                     {{ session('errorMessage') }}
                 </div>
             @endif
-            
+
             <div class="col-12 col-md-6 pb-4">
-                <h1>{{__('home.new_articles')}}</h1>
+                <h1>{{ __('home.new_articles') }}</h1>
             </div>
-            
+
             <div class="col-12 col-md-6 text-end">
-                <a href="{{ route('article.index') }}" class="btn primary-button">{{__('home.all_articles')}}</a>
+                <a href="{{ route('article.index') }}" class="btn primary-button">{{ __('home.all_articles') }}</a>
             </div>
 
             @forelse ($articles as $article)

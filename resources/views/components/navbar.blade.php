@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid mx-4">
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container">
         <a class="navbar-brand text-white" href="{{ route('home') }}">
             <img src="{{ asset('img/Logo-navbar-bianco.png') }}" alt="CodeCommerce Logo" class="logo">
             {{ env('APP_NAME') }}</a>

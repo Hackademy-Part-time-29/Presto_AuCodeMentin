@@ -37,6 +37,8 @@ a {
     padding: 12.5px 30px;
     margin: 0px;
     border: 0;
+    width: auto;
+    height: auto;
     border-radius: 100px;
     background-color: var(--color-thertiry);
     color: var(--color-black);
@@ -59,4 +61,11 @@ a {
     -webkit-transition: all 0.25s;
     box-shadow: none;
     transform: scale(0.98);
+}
+
+@media (max-width:720px) {
+    .secondary-button {
+        width: auto;
+        height: auto;
+    }
 }
