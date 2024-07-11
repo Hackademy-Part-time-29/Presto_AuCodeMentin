@@ -8,7 +8,7 @@
                     <h2 class="title mb-3">{{__('authForm.login')}}</h2>
                     <div class="input-field mb-3">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" name="email" type="email" placeholder="Username">
+                        <input class="inputCustom" name="email" type="email" placeholder="Username" value="{{old('email')}}">
                     </div>
                     @error('email')
                         <p class="fst-italic text-danger">
@@ -42,7 +42,7 @@
                     <h2 class="title mb-3">{{__('authForm.register')}}</h2>
                     <div class="input-field mb-3">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" name="name" type="text" placeholder="Username">
+                        <input class="inputCustom" name="name" type="text" placeholder="Username" value="{{old('name')}}">
                     </div>
                     @error('name')
                         <p class="fst-italic text-danger">
@@ -51,7 +51,7 @@
                     @enderror
                     <div class="input-field mb-3">
                         <i class="bi bi-envelope-fill text-center"></i>
-                        <input class="inputCustom" name="email" type="email" placeholder="Email">
+                        <input class="inputCustom" name="email" type="email" placeholder="Email" value="{{old('email')}}">
                     </div>
                     @error('email')
                         <p class="fst-italic text-danger">

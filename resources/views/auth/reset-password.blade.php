@@ -9,7 +9,7 @@
                     <input type="hidden" name="token" value="{{request()->route('token')}}">
                     <div class="input-field mb-3">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" name="email" type="email" placeholder="Email">
+                        <input class="inputCustom" name="email" type="email" placeholder="Email" value="{{old('email')}}">
                     </div>
                     <div class="input-field mb-3">
                         <i class="bi bi-lock-fill text-center"></i>
