@@ -20,3 +20,7 @@
 body{
     background-color: var(--color-white);
 }
+
+.margin-custom{
+    margin-bottom: 100px;
+}

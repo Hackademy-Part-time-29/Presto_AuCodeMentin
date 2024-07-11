@@ -83,9 +83,8 @@
                     @endif
                 </div>
             @endforeach
-            <div class="row mb-5">
-                <div class="d-flex justify-content-center align-item-center">
-                    <div class="col-4">
+                <div class="d-flex justify-content-center align-item-center margin-custom">
+                    <div class="col-4 my-5 mb-5">
                         <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
@@ -93,7 +92,7 @@
                             <button class="btn btn-danger py-2 px-5 fw-bold">{{ __('revisor.btn_delete') }}</button>
                         </form>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 my-5 mb-5">
                         @if ($latest_article)
                             <div class="col-3">
                                 <form action="{{ route('rollback', ['article' => $latest_article]) }}" method="POST">
@@ -106,7 +105,7 @@
                             </div>
                         @endif
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 my-5 mb-5">
                         <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
                             @csrf
                             @method('PATCH')
@@ -115,7 +114,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
     </div>
 @else
     <div class="row justify-content-center align-items-center height-custom text-center">
