@@ -4,6 +4,7 @@ return [
     'title'=>"Dettaglio dell'articolo",
     'object'=>'Titolo:',
     'price'=>'Prezzo:',
+    'category' => 'Categoria:',
     'description'=>'Descrizione:',
     //by category
     'head' => 'Articoli della categoria ',
