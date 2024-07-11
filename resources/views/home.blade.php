@@ -14,7 +14,7 @@
                 <div class="col-12 col-md-6 mb-3 mb-md-0 text-center text-md-start">
                     <h1 class="mb-md-3"> {{ __('home.welcome') }} {{ env('APP_NAME') }}</h1>
                     <h4>{{ __('home.desc_welcome') }}</h4>
-                    <a href="{{ route('article.create') }}" class="btn secondary-button mt-md-3"><i
+                    <a href="{{ route('article.create') }}" class="btn thertiry-button mt-md-3"><i
                             class="bi bi-plus-circle"></i> {{ __('home.add_article') }}</a>
                 </div>
                 <div class="col-12 col-md-6 text-md-end text-center text-md-start">

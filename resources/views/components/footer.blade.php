@@ -47,9 +47,17 @@
                 </ul>
             </div>
             <div class="col-lg-4 col-12 mb-4 mb-md-0">
+              {{-- @if
+                <h5>Effettua l'accesso!</h5>
+                <p>Senza quello non potrai inserire nuovi articoli!</p>
+              @elseif (Auth::user()->is_revisor) 
+                <h5>Sei un revisore</h5>
+                <p>Vai nella sezione "zona revisore" e accetta gli articoli!</p>
+              @else --}}
                 <h5>{{ __('ui.call_revisor') }}</h5>
                 <p>{{ __('ui.desc_revisor') }}</p>
-                <a href="{{ route('form.revisor') }}" class="btn secondary-button">{{ __('ui.btn_revisor') }}</a>
+                <a href="{{ route('form.revisor') }}" class="btn thertiry-button">{{ __('ui.btn_revisor') }}</a>
+              {{-- @endif --}}
             </div>
         </div>
         <div class="text-center p-3 text-white">

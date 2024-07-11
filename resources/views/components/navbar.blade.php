@@ -31,20 +31,20 @@
                 </li>
                 <li class="nav-item dropdown me-3">
                     <a class="nav-item dropdown me-3nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false"><x-_locale lang="{{ App::currentLocale()  }}" /></a>
-    
+                        aria-expanded="false"><x-_locale lang="{{ App::currentLocale() }}" /></a>
+
                     <ul class="dropdown-menu dropdown-menu-start">
                         <div class="d-flex">
-                            @if ( App::currentLocale() != 'es')
+                            @if (App::currentLocale() != 'es')
                                 <li class="nav-item m-auto"><x-_locale lang="es" /></li>
                             @endif
-                            @if( App::currentLocale() != 'en')
+                            @if (App::currentLocale() != 'en')
                                 <li class="border-end"></li>
                                 <li class="nav-item m-auto"><x-_locale lang="en" /></li>
                             @endif
                             <li class="border-start"></li>
-                            @if ( App::currentLocale() != 'it')
-                            <li class="nav-item m-auto"><x-_locale lang="it" /></li>
+                            @if (App::currentLocale() != 'it')
+                                <li class="nav-item m-auto"><x-_locale lang="it" /></li>
                             @endif
                         </div>
                     </ul>
@@ -56,7 +56,7 @@
                     <livewire:search />
                 </li>
             </ul>
-            
+
             <ul class="navbar-nav">
                 @auth
                     <li class="nav-item dropdown">
@@ -77,10 +77,6 @@
                                 </li>
                                 <li class="dropdown-divider"></li>
                             @endif
-
-                            {{-- <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                            <li><a class="dropdown-item" href="#">Gestione account</a></li> --}}
-                            {{-- <li><hr class="dropdown-divider"></li> --}}
                             <li>
                                 <a class="dropdown-item" href="#"
                                     onclick="

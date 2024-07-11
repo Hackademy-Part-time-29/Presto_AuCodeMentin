@@ -9,7 +9,7 @@
         </div>
     @endif
 
-    <form class="container-custom form shadow rounded p-5 my-5" wire:submit="store">
+    <form class="container-custom container form shadow rounded p-5 my-5" wire:submit="store">
 
         <div class="mb-3">
             <label for="title" class="text">{{__('create-article.title')}} :</label>
@@ -59,10 +59,10 @@
             </p>
         @enderror
 
-        <label class="primary-button" for="file">
+        <label class="thertiry-button mb-3" for="file">
             <div>
-            <span class="input-group"><i class="bi bi-images"></i> </span>
-            <input type="file" id="file" wire:model.live="temporary_images" multiple class=" input @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
+            <span class="input-group"><i class="bi bi-images"> Inserisci un immagine</i></span>
+            <input type="file" id="file" wire:model.live="temporary_images" multiple class=" @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
             @error('temporary_images.*')
                 <p class="fst-italic text-danger">{{$message}}</p>
             @enderror
@@ -74,14 +74,14 @@
         
 
         @if (!empty($images))
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-12">
-                    <p>{{__('create-article.prev-photo')}}: </p>
-                    <div class="row  rounded shadow py-4">
+                    <p class="text">{{__('create-article.prev-photo')}}: </p>
+                    <div class="row rounded shadow py-4 bg-custom">
                         @foreach ($images as $key=>$image)
                             <div class="col d-flex flex-column align-items-center my-3">
-                                <div class="img-preview mx-auto shadow rounded" style="background-image: url({{ $image->temporaryUrl()}});"></div>
-                                <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})">X</button>
+                                <div class="img-preview mx-auto rounded" style="background-image: url({{ $image->temporaryUrl()}});"></div>
+                                <button type="button" class="btn mt-1 delate-button" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle"></i></button>
                             </div>
                         @endforeach
                     </div>
