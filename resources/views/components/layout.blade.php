@@ -14,7 +14,9 @@
         <div class="m-custom content">
             {{$slot}}
         </div>
-    
+
+    {{-- @if(!App::currentRouteName()=="login"||!App::currentRouteName()=="forgot-password"||!App::currentRouteName()=="reset-password") --}}
     <x-footer/>
+    {{-- @endif --}}
 </body>
 </html>
