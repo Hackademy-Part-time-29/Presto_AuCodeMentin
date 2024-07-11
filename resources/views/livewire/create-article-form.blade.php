@@ -47,7 +47,7 @@
         <div class="mb-3">
             <label for="category" class="text">{{ __('create-article.select_cat') }} :</label>
             <select id="category" wire:model.blur="category" class="input @error('title') is-invalid @enderror">
-                <option label> --{{ __('create-article.selezione') }}-- </option>
+                <option label> --{{ __('create-article.select_cat') }}-- </option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
