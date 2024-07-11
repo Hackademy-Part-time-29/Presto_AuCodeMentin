@@ -56,7 +56,27 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Racchetta da tennis', 'category_id' => 5, 'description' => 'Vendo racchetta da tennis, usata una volta', 'price' => '60'],
             ['title' => 'Fotocamera reflex', 'category_id' => 1, 'description' => 'Vendo fotocamera reflex con obiettivo 18-55mm', 'price' => '500'],
             ['title' => 'Libro di cucina', 'category_id' => 8, 'description' => 'Vendo libro di cucina italiana', 'price' => '15'],
-            ['title' => 'Sciarpa', 'category_id' => 2, 'description' => 'Vendo sciarpa di lana, fatta a mano', 'price' => '30']
+            ['title' => 'Sciarpa', 'category_id' => 2, 'description' => 'Vendo sciarpa di lana, fatta a mano', 'price' => '30'],
+            ['title' => 'Laptop', 'category_id' => 1, 'category' => 'Elettronica e Tecnologia', 'description' => 'Vendo laptop usato, ottime condizioni', 'price' => '800'],
+            ['title' => 'Smartwatch', 'category_id' => 1, 'category' => 'Elettronica e Tecnologia', 'description' => 'Vendo smartwatch nuovo, ancora in scatola', 'price' => '200'],
+            ['title' => 'Camicia', 'category_id' => 2, 'category' => 'Abbigliamento e Accessori', 'description' => 'Vendo camicia uomo taglia M', 'price' => '25'],
+            ['title' => 'Scarpe da ginnastica', 'category_id' => 2, 'category' => 'Abbigliamento e Accessori', 'description' => 'Vendo scarpe da ginnastica, usate pochissimo', 'price' => '40'],
+            ['title' => 'Lampada da tavolo', 'category_id' => 3, 'category' => 'Casa e Giardino', 'description' => 'Vendo lampada da tavolo moderna', 'price' => '30'],
+            ['title' => 'Tenda da campeggio', 'category_id' => 3, 'category' => 'Casa e Giardino', 'description' => 'Vendo tenda da campeggio per 4 persone', 'price' => '100'],
+            ['title' => 'Kit trucco', 'category_id' => 4, 'category' => 'Bellezza e Salute', 'description' => 'Vendo kit trucco professionale', 'price' => '50'],
+            ['title' => 'Piastra per capelli', 'category_id' => 4, 'category' => 'Bellezza e Salute', 'description' => 'Vendo piastra per capelli, usata una volta', 'price' => '20'],
+            ['title' => 'Pallone da basket', 'category_id' => 5, 'category' => 'Sport e Tempo Libero', 'description' => 'Vendo pallone da basket ufficiale NBA', 'price' => '30'],
+            ['title' => 'Sci', 'category_id' => 5, 'category' => 'Sport e Tempo Libero', 'description' => 'Vendo paio di sci, usati ma in buone condizioni', 'price' => '200'],
+            ['title' => 'Macchina per il pane', 'category_id' => 6, 'category' => 'Alimentari e Bevande', 'description' => 'Vendo macchina per il pane nuova', 'price' => '70'],
+            ['title' => 'Set di pentole', 'category_id' => 6, 'category' => 'Alimentari e Bevande', 'description' => 'Vendo set di pentole antiaderenti', 'price' => '50'],
+            ['title' => 'Puzzle 1000 pezzi', 'category_id' => 7, 'category' => 'Giochi e Giocattoli', 'description' => 'Vendo puzzle 1000 pezzi, nuovo', 'price' => '15'],
+            ['title' => 'Macchinina radiocomandata', 'category_id' => 7, 'category' => 'Giochi e Giocattoli', 'description' => 'Vendo macchinina radiocomandata, mai usata', 'price' => '60'],
+            ['title' => 'Romanzo giallo', 'category_id' => 8, 'category' => 'Libri, Film e Musica', 'description' => 'Vendo romanzo giallo, come nuovo', 'price' => '10'],
+            ['title' => 'DVD di film classici', 'category_id' => 8, 'category' => 'Libri, Film e Musica', 'description' => 'Vendo collezione di DVD di film classici', 'price' => '50'],
+            ['title' => 'Batteria auto', 'category_id' => 9, 'category' => 'Auto e Moto', 'description' => 'Vendo batteria auto nuova', 'price' => '100'],
+            ['title' => 'Copertoni per moto', 'category_id' => 9, 'category' => 'Auto e Moto', 'description' => 'Vendo set di copertoni per moto, nuovi', 'price' => '150'],
+            ['title' => 'Acquario', 'category_id' => 10, 'category' => 'Articoli per Animali', 'description' => 'Vendo acquario completo di accessori', 'price' => '70'],
+            ['title' => 'Cuccia per cane', 'category_id' => 10, 'category' => 'Articoli per Animali', 'description' => 'Vendo cuccia per cane taglia grande', 'price' => '50'],
      ];
    
 
