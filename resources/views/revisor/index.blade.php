@@ -101,7 +101,7 @@
 
 
         @if ($article_to_check)
-            <div class="row justify-content-center pt-5">
+            <div class="row justify-content-center pt-5 mb-3">
                 <div class="d-flex justify-content-center align-item-center">
                     <div class="col-4">
                         <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
@@ -118,8 +118,7 @@
                                     @csrf
                                     @method('PATCH')
 
-                                    <button
-                                        class="btn btn-warning py-2 px-5 fw-bold"><i class="bi bi-arrow-left"></i>{{ __('revisor.btn_last') }}</button>
+                                    <button class="btn thertiry-button py-2 px-5 fw-bold">{{ __('revisor.btn_last') }}</button>
                                 </form>
                             </div>
                         @endif
@@ -140,17 +139,20 @@
                     <h1 class="fst-italic display-4">
                         {{ __('revisor.head') }}
                     </h1>
-                    <a href="{{ route('home') }}" class="mt-5 primary-button">{{ __('revisor.btn_back') }}</a>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="row">
                 @if ($latest_article)
-                    <div class="col-3">
+                    <div class="col-md-6 col-12">
+                        <a href="{{ route('home') }}" class="mt-5 primary-button">{{ __('revisor.btn_back') }}</a>
+                    </div>
+                
+                    <div class="col-md-6 col-12">
                         <form action="{{ route('rollback', ['article' => $latest_article]) }}" method="POST">
                             @csrf
                             @method('PATCH')
 
-                            <button class="btn btn-warning py-2 px-5 fw-bold">{{ __('revisor.btn_last') }}</button>
+                            <button class="btn thertiry-button py-2 px-5 fw-bold">{{ __('revisor.btn_last') }}</button>
                         </form>
                     </div>
                 @endif
