@@ -25,11 +25,12 @@ class Image extends Model
     {
         if (!$w && !$h) {
             return Storage::url($filePath);
-    }
-    $path = dirname($filePath);
-    $filename = basename($filePath);
-    $file = "{$path}/crop_{$w}x{$h}_{$filename}";
-    return Storage::url($file);
+        }
+        $path = dirname($filePath);
+        $filename = basename($filePath);
+        $file = "{$path}/crop_{$w}x{$h}_{$filename}";
+
+        return Storage::url($file);  
     }
 
     public function getUrl($w = null, $h = null)
