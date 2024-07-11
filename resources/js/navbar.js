@@ -1,9 +1,9 @@
-let navbar = document.querySelector('#navbar');
+// let navbar = document.querySelector('#navbar');
 
-window.addEventListener('scroll', ()=> {
-    if(window.scrollY > 0){
-        navbar.classList.add('scrollNavbar');
-    } else {
-        navbar.classList.remove('scrollNavbar');
-    }
-});
+// window.addEventListener('scroll', ()=> {
+//     if(window.scrollY > 0){
+//         navbar.classList.add('scrollNavbar');
+//     } else {
+//         navbar.classList.remove('scrollNavbar');
+//     }
+// });

@@ -23,19 +23,6 @@
                         <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
                     </span>
                     <button class="primary-button mb-3" type="submit">Login</button>
-
-                    <p class="social-text">{{__('authForm.login-social')}}</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="bi bi-github"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="bi bi-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                    </div>
                 </form>
                 <form method="POST" action="/register" class="sign-up-form" id="loginRegisterForm">
                     @csrf
@@ -72,19 +59,6 @@
                         <input class="inputCustom" name="password_confirmation" type="password" type="password" placeholder="Conferma password">
                     </div>
                     <button class="primary-button mt-2 mb-2" type="submit">{{__('authForm.register')}}</button>
-
-                    <p class="social-text">{{__('authForm.login-social')}}</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="bi bi-github"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="bi bi-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                    </div>
                 </form>
             </div>
         </div>
