@@ -11,7 +11,7 @@
                     <div class="col-12 text-center"><a href="{{ route('article.show', compact('article')) }}"
                             class="btn primary-button mb-3">{{ __('articles.btn_detail') }}</a></div>
                     <div class="col-12 text-center"><a href="{{ route('byCategory', ['category' => $article->category]) }}"
-                            class="btn secondary-button">{{ __('categories.' . $article->category->name) }}</a></div>
+                            class="btn thertiry-button">{{ __('categories.' . $article->category->name) }}</a></div>
                 </div>
             </div>
         </article>
