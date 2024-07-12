@@ -4,7 +4,7 @@
             <div class="forgotPassword">
                 
                 <form method="POST" action="/reset-password" class="sign-in-form" id="loginRegisterForm">
-                    <h2 class="title mb-3">Crea nuova password</h2>
+                    <h2 class="title mb-5 mb-md-3">Crea nuova password</h2>
                     @csrf
                     <input type="hidden" name="token" value="{{request()->route('token')}}">
                     <div class="input-field mb-3">

@@ -3,7 +3,8 @@
         <!-- Titolo della categoria -->
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
-                <h1 class="display-2 heading">{{ __('categories.head') }}<span class="fst-italic heading fw-bold">{{ __('categories.' . $category->name) }}</span></h1>
+                <h1 class="display-2 heading">{{ __('categories.head') }}</h1>
+                <h2 class="display-3 fst-italic heading fw-bold">{{ __('categories.' . $category->name) }}</h2>
             </div>
         </div>
 

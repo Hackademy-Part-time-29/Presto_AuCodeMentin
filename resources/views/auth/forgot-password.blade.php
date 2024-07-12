@@ -9,13 +9,13 @@
                         </div>
                     @endif
                     @csrf
-                    <h2 class="title mb-3">Password dimenticata?</h2>
+                    <h2 class="title mb-4 mb-md-3">Password dimenticata?</h2>
                     <div class="input-field mb-4">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input name="email" type="email" class="inputCustom" placeholder="E-mail"
                             value="{{ old('email') }}">
                     </div>
-                    <button class="primary-button mb-3" type="submit">Reimposta password</button>
+                    <button class="primary-button" type="submit">Reimposta password</button>
 
                 </form>
             </div>

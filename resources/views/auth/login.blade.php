@@ -19,7 +19,7 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input class="inputCustom" name="password" type="password" placeholder="Password">
                     </div>
-                    <span class="forgot-password mt-2 mb-2">
+                    <span class="forgot-password mt-2 mb-3">
                         <a href="{{ route('password.request') }}">{{ __('authForm.forgotten_pass') }}</a>
                     </span>
                     <button class="primary-button mb-3" type="submit">Login</button>

@@ -35,11 +35,11 @@
                 </div>
             @endif
 
-            <div class="col-12 col-md-6 pb-4">
+            <div class="col-12 col-md-6 pb-4 text-center text-md-start">
                 <h1>{{ __('home.new_articles') }}</h1>
             </div>
 
-            <div class="col-12 col-md-6 text-end">
+            <div class="col-12 col-md-6 text-center text-md-end">
                 <a href="{{ route('article.index') }}" class="btn primary-button">{{ __('home.all_articles') }}</a>
             </div>
 

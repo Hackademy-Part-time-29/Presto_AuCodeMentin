@@ -11,7 +11,7 @@
         <!-- Lista degli articoli -->
         <div class="row height-custom justify-content-center align-items-center py-5">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-3 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 mb-4">
                     <x-card :article="$article" :categories="$categories" />
                 </div>
             @empty
