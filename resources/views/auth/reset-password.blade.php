@@ -3,15 +3,15 @@
         <div class="formsContainer">
             <div class="forgotPassword">
                 
-                <form method="POST" action="/reset-password" id="loginRegisterForm">
-                    <h2 class="title">Crea nuova password</h2>
+                <form method="POST" action="/reset-password" class="sign-in-form" id="loginRegisterForm">
+                    <h2 class="title mb-5 mb-md-3">Crea nuova password</h2>
                     @csrf
                     <input type="hidden" name="token" value="{{request()->route('token')}}">
-                    <div class="input-field">
+                    <div class="input-field mb-3">
                         <i class="bi bi-person-fill text-center"></i>
-                        <input class="inputCustom" name="email" type="email" placeholder="Email">
+                        <input class="inputCustom" name="email" type="email" placeholder="Email" value="{{old('email')}}">
                     </div>
-                    <div class="input-field">
+                    <div class="input-field mb-3">
                         <i class="bi bi-lock-fill text-center"></i>
                         <input name="password" type="password" class="inputCustom" placeholder="Password">
                     </div>
@@ -19,7 +19,7 @@
                         <i class="bi bi-lock-fill text-center"></i>
                         <input name="password_confirmation" type="password" class="inputCustom" placeholder="Ripeti password">
                     </div>
-                    <button class="primary-button" type="submit">Reimposta password</button>
+                    <button class="primary-button mb-3 mt-3" type="submit">Reimposta password</button>
                 </form>
             </div>
         </div>

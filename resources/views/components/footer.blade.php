@@ -1,31 +1,3 @@
-{{-- <footer class="footer bg-light text-center text-lg-start mt-auto">
-    <div class="container p-4">
-      <div class="row">
-        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">{{env('APP_NAME')}}</h5>
-          <p>Il tuo negozio online di fiducia.</p>
-        </div>
-        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">{{__('ui.contacts')}}</h5>
-          <ul class="list-unstyled mb-0">
-            <li><a href="#!" class="text-dark">{{__('ui.info')}}</a></li>
-            <li><a href="#!" class="text-dark">{{__('ui.phone')}}</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5>{{__('ui.call_revisor')}}</h5>
-          <p>{{__('ui.desc_evisor')}}</p>
-
-          <a href="{{route('become.revisor')}}" class="btn btn-custom">{{__('ui.btn_revisor')}}</a>
-        </div>
-      </div>
-    </div>
-    <div class="text-center p-3 bg-dark text-white">
-      © 2024 {{env('APP_NAME')}}
-    </div>
-</footer> --}}
-
-
 <footer class="text-center mt-5">
     <div class="waves">
         <div class="wave" id="wave1"></div>
@@ -47,9 +19,17 @@
                 </ul>
             </div>
             <div class="col-lg-4 col-12 mb-4 mb-md-0">
+              {{-- @if
+                <h5>Effettua l'accesso!</h5>
+                <p>Senza quello non potrai inserire nuovi articoli!</p>
+              @elseif (Auth::user()->is_revisor) 
+                <h5>Sei un revisore</h5>
+                <p>Vai nella sezione "zona revisore" e accetta gli articoli!</p>
+              @else --}}
                 <h5>{{ __('ui.call_revisor') }}</h5>
                 <p>{{ __('ui.desc_revisor') }}</p>
-                <a href="{{ route('become.revisor') }}" class="btn secondary-button">{{ __('ui.btn_revisor') }}</a>
+                <a href="{{ route('form.revisor') }}" class="btn thertiry-button">{{ __('ui.btn_revisor') }}</a>
+              {{-- @endif --}}
             </div>
         </div>
         <div class="text-center p-3 text-white">

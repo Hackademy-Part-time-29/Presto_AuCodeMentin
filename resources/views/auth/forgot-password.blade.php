@@ -2,14 +2,21 @@
     <div class="containerCustom heightCustom">
         <div class="formsContainer">
             <div class="forgotPassword">
-                <form method="POST" action="{{ route('password.email') }}" id="loginRegisterForm">
+                <form method="POST" action="{{ route('password.email') }}" class="sign-in-form" id="loginRegisterForm">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     @csrf
-                    <h2 class="title">Password dimenticata?</h2>
-                    <div class="input-field">
+                    <h2 class="title mb-4 mb-md-3">Password dimenticata?</h2>
+                    <div class="input-field mb-4">
                         <i class="bi bi-lock-fill text-center"></i>
-                        <input name="email" type="email" class="inputCustom" placeholder="E-mail">
+                        <input name="email" type="email" class="inputCustom" placeholder="E-mail"
+                            value="{{ old('email') }}">
                     </div>
                     <button class="primary-button" type="submit">Reimposta password</button>
+
                 </form>
             </div>
         </div>

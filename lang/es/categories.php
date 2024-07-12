@@ -1,5 +1,12 @@
 <?php
 return [
+    //show
+    'title'=>"Detalle del artículo",
+    'object'=>'Titulo:',
+    'price'=>'Precio:',
+    'description'=>'Descripción:',
+    'category'=>'categoría:',
+    //by category
     'head'=>'Artículos de la categoría ',
     'not_article'=>'Todavía no se han creado artículos para esta categoría',
     'btn_add'=>'Insertar anuncio',
