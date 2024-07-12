@@ -1,9 +1,9 @@
 .container-custom {
     width: auto;
-    background: var(--color-white);
+    background: var(--color-form);
     border-radius: 40px;
     padding: 25px 35px;
-    border: 5px solid var(--color-form);
+    /* border: 5px solid var(--color-form); */
     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     margin: 20px;
 }
@@ -20,7 +20,7 @@
 
 .form .input {
     width: 100%;
-    background-color: var(--color-form);
+    background-color: var(--color-white);
     border: none;
     padding: 15px 20px;
     border-radius: 20px;
