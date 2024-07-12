@@ -30,7 +30,7 @@
                         {{ $article_to_check->description }}</p>
                 </div>
                 @foreach ($article_to_check->images as $key => $image)
-                    <div class="col-4 container-custom">
+                    <div class="col-4 container-custom mx-auto">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="{{ $image->getUrl(400, 400) }}" class="img-fluid rounded-start"
