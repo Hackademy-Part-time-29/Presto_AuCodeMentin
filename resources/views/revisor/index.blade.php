@@ -20,7 +20,17 @@
         <div class="row">
 
             @if ($article_to_check)
-                <div class="col-12 ps-4 d-flex flex-column justify-content-between">
+                @if (count($article_to_check->images) < 1)
+                    <div class="col-12 col-md-6 container-custom mx-auto">
+                        <div class="row g-0">
+                            <div class="col-md-12 rounded">
+                                <img src="{{'/img/img_cat/cat'.($article_to_check->category->id).'.jpeg'}}" width="400" height="400" class="img-fluid rounded-start"
+                                    alt="Immagine utente mancante">
+                            </div>
+                        </div>
+                    </div>
+                @endif
+                <div class="col-12 col-md-6 ps-4 d-flex flex-column justify-content-between">
                     <h1>{{ $article_to_check->title }}</h1>
                     <h3>{{ __('revisor.author') }} : {{ $article_to_check->user->name ?? null }}</h3>
                     <h4>{{ __('categories.price') }} {{ $article_to_check->price }}€</h4>
@@ -29,11 +39,12 @@
                     <p class="h6">{{ __('categories.description') }}
                         {{ $article_to_check->description }}</p>
                 </div>
+                
                 @foreach ($article_to_check->images as $key => $image)
                     <div class="col-4 container-custom mx-auto">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="{{ $image->getUrl(400, 400) }}" class="img-fluid rounded-start"
+                                <img src="{{ $image->getUrl(400, 400) ?? '/img/img_cat/cat'.($article_to_check->category->id).'.jpeg'}}" class="img-fluid rounded-start"
                                     alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
                             </div>
                             <div class="col-md-8 ps-3">
